@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@layer base {
+  html,
+  body {
+    @apply max-w-full
+    p-0
+    m-0
+    bg-cover;
+  }
+
+  html {
+    @apply min-w-[280px]
+    overflow-x-hidden;
+    font-size: 62.5%;
+  }
+  body {
+    @apply text-paragraph
+    bg-white;
+    overflow: unset;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  main {
+    @apply min-h-screen;
+  }
+
+  img {
+    @apply block
+    max-w-full;
+  }
+
+  /* Font sizes */
+
+  p {
+    @apply text-paragraph
+    font-regular;
+  }
+
+  .label {
+    @apply text-label
+    uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-semiLight;
+  }
+}
+
+@layer utilities {
+  .scrollFreeze {
+    overflow: hidden;
+    width: 100vw;
+  }
+}
