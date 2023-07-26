@@ -74,7 +74,7 @@ export default function MobileNav({
 
       <nav
         className={cx(
-          ' md:hidden absolute flex  flex-col gap-fluid-72 bg-softWhite top-[100px] overflow-y-auto h-fill min-h-[calc(100vh-100px)] w-fill px-fluid-40 py-fluid-56 transform duration-500 ease-in-out',
+          ' md:hidden absolute flex  flex-col gap-fluid-72 bg-softWhite top-[90px] xs:top-[100px] overflow-y-auto h-fill min-h-[calc(100vh-100px)] w-fill px-fluid-40 py-fluid-56 transform duration-500 ease-in-out',
           { ['ml-fill']: !showMobileNav, ['ml-0']: showMobileNav }
         )}
       >
