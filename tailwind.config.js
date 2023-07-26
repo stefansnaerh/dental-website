@@ -11,19 +11,14 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: '#FFF',
-      black: '#0F0F0F',
-      gray10: '#F5F5F5',
-      gray20: '#E1E1E1',
-      gray30: '#C8C8C8',
-      gray40: '#A0A0A0',
-      gray50: '#7D7D7D',
-      gray60: '#646464',
-      gray70: '#4B4B4B',
-      gray80: '#323232',
-      yellow: '#FFDC5F',
-      yellowHover: '#FFE37D',
+      softWhite: '#FFFBF9',
+      black: '#373737',
       headerBeige: '#FCF2EA',
       footerBeige: '#FFE8CB',
+      orange: '#F8B040',
+      orangeHover: '#FFCC7D',
+      brown: '#85623D',
+      brownHover: '#B58F65',
     },
     letterSpacing: {
       tighter: '-0.03em',
@@ -39,10 +34,12 @@ module.exports = {
      * Minimun and maximum font sizes are in REM
      */
     fontSize: {
-      // Mobile font sizes might need changes since design not ready
-
       sm: [
         'clamp(1.4rem, 1.341rem + 0.15vw, 1.6rem)',
+        { lineHeight: '1.38', letterSpacing: '0em' },
+      ],
+      md: [
+        'clamp(1.6rem, 1.482rem + 0.3vw, 2rem)',
         { lineHeight: '1.38', letterSpacing: '0em' },
       ],
       paragraph: [
@@ -69,19 +66,6 @@ module.exports = {
       h5: [
         'clamp(2.8rem, 2.236rem + 1.484vw, 4.8rem)',
         { lineHeight: '1.08', letterSpacing: '-0.02em' },
-      ],
-      // Sub headlines
-      SH1: [
-        'clamp(3.2rem, 2.523rem + 1.78vw, 5.6rem)',
-        { lineHeight: '1.38', letterSpacing: '-0.02em' },
-      ],
-      SH2: [
-        'clamp(2.4rem, 1.949rem + 1.187vw, 4rem)',
-        { lineHeight: '1.38', letterSpacing: '-0.02em' },
-      ],
-      SH3: [
-        'clamp(2rem, 1.662rem + 0.89vw, 3.2rem)',
-        { lineHeight: '1.38', letterSpacing: '-0.02em' },
       ],
     },
     fontWeight: {
@@ -136,7 +120,8 @@ module.exports = {
       120: '120px',
       128: '128px',
       240: '240px',
-      'fluid-8': 'clamp(6px, 0.46vw, 8px)',
+      'fluid-8': 'clamp(8px, 0.46vw, 10px)',
+      'fluid-12': 'clamp(10px, 0.76vw, 12px)',
       'fluid-16': 'clamp(12px, 0.9vw, 16px)',
       'fluid-18': 'clamp(16px, 0.9vw, 18px)',
       'fluid-24': 'clamp(18px, 1.4vw, 24px)',
@@ -158,7 +143,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        poppins: ['var(--font-poppins)'],
       },
       borderRadius: {
         8: '8px',
@@ -166,6 +151,9 @@ module.exports = {
         16: '16px',
         32: '32px',
         full: '100%',
+      },
+      boxShadow: {
+        button: ' 0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
       },
       aspectRatio: {
         '5/6': '5 / 6',
@@ -178,5 +166,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 }

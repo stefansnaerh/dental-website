@@ -1,0 +1,95 @@
+{
+  "id": "header",
+  "label": "Header",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "first_link_text": {
+        "type": "Text",
+        "config": { "label": "First link text", "placeholder": "" }
+      },
+      "first_link": {
+        "type": "Link",
+        "config": { "label": "First Link", "placeholder": "", "select": null }
+      },
+      "link_group_1_title": {
+        "type": "Text",
+        "config": { "label": "Link group 1 title", "placeholder": "" }
+      },
+      "link_group_1": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 1",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link Name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "link_group_2_title": {
+        "type": "Text",
+        "config": { "label": "Link group 2 title", "placeholder": "" }
+      },
+      "link_group_2": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 2",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link Name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "link_group_3_title": {
+        "type": "Text",
+        "config": { "label": "Link group 3 title", "placeholder": "" }
+      },
+      "link_group_3": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 3",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link Name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "Link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "scroll_to_section_id": {
+        "type": "Text",
+        "config": { "label": "Scroll to section id", "placeholder": "" }
+      },
+      "scroll_to_section_text": {
+        "type": "Text",
+        "config": { "label": "Scroll to section text", "placeholder": "" }
+      },
+      "button_text": {
+        "type": "Text",
+        "config": { "label": "Button Text", "placeholder": "" }
+      },
+      "button_link": {
+        "type": "Link",
+        "config": { "label": "Button Link", "placeholder": "", "select": null }
+      }
+    }
+  }
+}

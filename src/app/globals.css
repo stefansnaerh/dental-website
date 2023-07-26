@@ -25,7 +25,7 @@
   body {
     @apply text-paragraph
     bg-white;
-    overflow: unset;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -63,5 +63,17 @@
   .scrollFreeze {
     overflow: hidden;
     width: 100vw;
+  }
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .noScrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .noScrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 }
