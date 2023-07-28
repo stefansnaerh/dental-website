@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
 import { PrismicNextLink } from '@prismicio/next'
-import ChevronDown from '../../icons/ChevronDown.svg'
-import { navGroups } from '../Header/Header'
+import ChevronDown from '../../../icons/ChevronDown.svg'
+import { navGroups } from '../Header'
 import { KeyTextField, LinkField } from '@prismicio/client'
 
 export default function NavGroup({

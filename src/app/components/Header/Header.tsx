@@ -4,9 +4,9 @@ import { KeyTextField, LinkField } from '@prismicio/client'
 import Logo from '../../icons/Logo.svg'
 import ChevronDown from '../../icons/ChevronDown.svg'
 import CalendarIcon from '../../icons/Calendar.svg'
-import NavGroup from '../NavGroup/NavGroup'
+import NavGroup from './NavGroup/NavGroup'
 import Button from '../Button/Button'
-import MobileNav from '../MobileNav/mobileNav'
+import MobileNav from './MobileNav/mobileNav'
 
 export interface navGroups {
   title: KeyTextField

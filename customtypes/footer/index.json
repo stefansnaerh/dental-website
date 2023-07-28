@@ -1,0 +1,107 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "link_group_1_title": {
+        "type": "Text",
+        "config": { "label": "Link group 1 title", "placeholder": "" }
+      },
+      "link_group_1": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 1",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "Link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "link_group_2_title": {
+        "type": "Text",
+        "config": { "label": "Link group 2 title", "placeholder": "" }
+      },
+      "link_group_2": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 2",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "Link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "link_group_3_title": {
+        "type": "Text",
+        "config": { "label": "Link group 3 title", "placeholder": "" }
+      },
+      "link_group_3": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 3",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "Link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "link_group_4_title": {
+        "type": "Text",
+        "config": { "label": "Link group 4 title", "placeholder": "" }
+      },
+      "link_group_4": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 4",
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": { "label": "Link name", "placeholder": "" }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "Link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "company_address": {
+        "type": "Text",
+        "config": { "label": "Company address", "placeholder": "" }
+      },
+      "company_ssd_number": {
+        "type": "Text",
+        "config": { "label": "Company SSD number", "placeholder": "" }
+      },
+      "company_email": {
+        "type": "Text",
+        "config": { "label": "Company email", "placeholder": "" }
+      },
+      "company_phone_number": {
+        "type": "Text",
+        "config": { "label": "Company phone number", "placeholder": "" }
+      }
+    }
+  }
+}

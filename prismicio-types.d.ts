@@ -4,6 +4,259 @@ import type * as prismic from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
+/**
+ * Item in *Footer → Link group 1*
+ */
+export interface FooterDocumentDataLinkGroup1Item {
+  /**
+   * Link name field in *Footer → Link group 1*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[].link_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_name: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Link group 1*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Footer → Link group 2*
+ */
+export interface FooterDocumentDataLinkGroup2Item {
+  /**
+   * Link name field in *Footer → Link group 2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2[].link_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_name: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Link group 2*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Footer → Link group 3*
+ */
+export interface FooterDocumentDataLinkGroup3Item {
+  /**
+   * Link name field in *Footer → Link group 3*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3[].link_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_name: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Link group 3*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Footer → Link group 4*
+ */
+export interface FooterDocumentDataLinkGroup4Item {
+  /**
+   * Link name field in *Footer → Link group 4*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_4[].link_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_name: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Link group 4*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_4[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Link group 1 title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_1_title: prismic.KeyTextField
+
+  /**
+   * Link group 1 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  link_group_1: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup1Item>>
+
+  /**
+   * Link group 2 title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_2_title: prismic.KeyTextField
+
+  /**
+   * Link group 2 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  link_group_2: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup2Item>>
+
+  /**
+   * Link group 3 title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_3_title: prismic.KeyTextField
+
+  /**
+   * Link group 3 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  link_group_3: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup3Item>>
+
+  /**
+   * Link group 4 title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_4_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_4_title: prismic.KeyTextField
+
+  /**
+   * Link group 4 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_4[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  link_group_4: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup4Item>>
+
+  /**
+   * Company address field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_address: prismic.KeyTextField
+
+  /**
+   * Company SSD number field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_ssd_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_ssd_number: prismic.KeyTextField
+
+  /**
+   * Company email field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_email: prismic.KeyTextField
+
+  /**
+   * Company phone number field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_phone_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_phone_number: prismic.KeyTextField
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    'footer',
+    Lang
+  >
+
 type FrontPageDocumentDataSlicesSlice = never
 
 /**
@@ -364,7 +617,10 @@ export type HeaderDocument<Lang extends string = string> =
     Lang
   >
 
-export type AllDocumentTypes = FrontPageDocument | HeaderDocument
+export type AllDocumentTypes =
+  | FooterDocument
+  | FrontPageDocument
+  | HeaderDocument
 
 /**
  * Primary content in *CompanyInfo → Primary*
@@ -421,6 +677,8 @@ declare module '@prismicio/client' {
 
   namespace Content {
     export type {
+      FooterDocument,
+      FooterDocumentData,
       FrontPageDocument,
       FrontPageDocumentData,
       HeaderDocument,
