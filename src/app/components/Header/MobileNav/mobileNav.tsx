@@ -41,6 +41,7 @@ export default function MobileNav({
     <>
       <button
         onClick={toggleShowNav}
+        aria-label="Takki til að sýna farsíma valmynd"
         className="md:hidden flex justify-between flex-col h-[30px] w-56 self-center pr-24 "
       >
         <div
@@ -78,9 +79,16 @@ export default function MobileNav({
         )}
       >
         <ul className="text-[24px] flex flex-col gap-fluid-32 ">
-          <PrismicNextLink field={firstLink}>
-            <li>{firstLinkText} </li>
-          </PrismicNextLink>
+          <li>
+            {' '}
+            <PrismicNextLink
+              aria-label={`Hlekkur sem fer með þig á ${firstLinkText}`}
+              field={firstLink}
+            >
+              {firstLinkText}
+            </PrismicNextLink>
+          </li>
+
           {navGroups.map((group, i) => {
             return (
               <li key={i}>
@@ -107,9 +115,15 @@ export default function MobileNav({
                       i: number
                     ) => {
                       return (
-                        <PrismicNextLink field={el.link}>
-                          <li key={i}>{el.link_name}</li>
-                        </PrismicNextLink>
+                        <li key={i}>
+                          {' '}
+                          <PrismicNextLink
+                            aria-label={`Hlekkur til að fara með þig á ${el.link_name}`}
+                            field={el.link}
+                          >
+                            {el.link_name}
+                          </PrismicNextLink>
+                        </li>
                       )
                     }
                   )}
@@ -123,6 +137,7 @@ export default function MobileNav({
           type="anchor"
           icon={<CalendarIcon className="h-24 w-24" />}
           href={buttonLink}
+          ariaLabel={`Hlekkur til að fara með þig á ${buttonText}`}
           className="bg-brown  text-white font-medium  hover:bg-brownHover transition-all duration-300 ease-in-out"
         />
       </nav>

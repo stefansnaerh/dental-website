@@ -35,7 +35,7 @@ export default async function Header() {
   ]
 
   return (
-    <header className="fixed  top-0 left-0 right-0  justify-between flex bg-headerBeige h-[90px] xs:h-[100px] md:h-[120px]  font-poppins text-md  text-black ">
+    <header className="fixed  top-0 left-0 right-0  justify-between flex bg-headerBeige h-[90px] xs:h-[100px] md:h-[120px] z-50 font-poppins text-md  text-black ">
       <Logo className="h-[90px] xs:h-[100px] md:h-120 lg:w-[200px] w-[180px] pl-24" />
 
       {/*------------------------ Mobile Navigation ---------------------------------------*/}
@@ -51,7 +51,10 @@ export default async function Header() {
       <nav className="hidden md:flex gap-fluid-56 xl:gap-fluid-72 pr-24 ">
         <ul className="flex self-center  gap-20 lg:gap-fluid-56 ">
           <li>
-            <PrismicNextLink field={content.first_link}>
+            <PrismicNextLink
+              aria-label={`Hlekkur á ${content.first_link_text}`}
+              field={content.first_link}
+            >
               {content.first_link_text}
             </PrismicNextLink>
           </li>
@@ -62,6 +65,7 @@ export default async function Header() {
         <Button
           text={content.button_text}
           type="anchor"
+          ariaLabel={`Hlekkur til að fara á ${content.button_text}`}
           icon={<CalendarIcon className="h-24 w-24" />}
           href={content.button_link}
           className="bg-brown text-white font-medium self-center hover:bg-brownHover transition-all duration-300 ease-in-out"

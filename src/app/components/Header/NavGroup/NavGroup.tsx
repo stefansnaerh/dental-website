@@ -22,9 +22,13 @@ export default function NavGroup({
     <>
       {headerNavGroups.map((group, i) => {
         return (
-          <div className="flex">
-            <li key={i}>
-              <button className="flex  gap-6" onClick={() => showNavGroup(i)}>
+          <div key={i} className="flex">
+            <li>
+              <button
+                aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
+                className="flex  gap-6"
+                onClick={() => showNavGroup(i)}
+              >
                 {group.title}
                 <ChevronDown
                   className={
@@ -47,9 +51,14 @@ export default function NavGroup({
                     i: number
                   ) => {
                     return (
-                      <PrismicNextLink field={el.link}>
-                        <li key={i}>{el.link_name}</li>
-                      </PrismicNextLink>
+                      <li key={i}>
+                        <PrismicNextLink
+                          aria-label={`Hlekkur á ${el.link_name}`}
+                          field={el.link}
+                        >
+                          {el.link_name}
+                        </PrismicNextLink>
+                      </li>
                     )
                   }
                 )}

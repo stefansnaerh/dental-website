@@ -43,7 +43,7 @@ export default function Button({
     >
       {icon ? <>{icon}</> : ''}
       {text}
-      {arrow ? <ArrowRight className="self-center h-24 w-24" /> : ''}
+      {arrow ? <ArrowRight className="self-center h-16 w-16" /> : ''}
     </PrismicNextLink>
   )
 }
