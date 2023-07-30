@@ -33,17 +33,17 @@ export default async function Footer() {
   ]
 
   return (
-    <footer className=" font-poppins sm:my-32 mx-fluid-12 flex flex-col gap-16 text-sm text-black md:gap-fluid-48 xxs:mx-fluid-16 sm:mx-fluid-40 lg:mx-fluid-56">
-      <div className="flex flex-col w-fill md:flex-row px-24  md:justify-between gap-y-16 sm:gap-64 rounded-12 bg-footerBeige pt-40 p-8 xs:p-48 md:py-56 md:pt-56 md:pb-fluid-80">
-        <Logo className="h-72 -ml-8 w-[190px]  sm:flex " />
+    <footer className=" font-poppins sm:my-32 mx-fluid-12 flex flex-col gap-16 text-sm text-black md:gap-fluid-48 xxs:mx-fluid-16 sm:mx-fluid-40 lg:mx-fluid-56 ">
+      <div className="flex flex-col w-fill md:flex-row px-24  md:justify-between lg:justify-around gap-y-16 sm:gap-64 rounded-12 bg-footerBeige py-fluid-40 p-8 xs:p-48 md:py-56 md:pt-56 md:pb-fluid-80">
+        <Logo className="h-72 -ml-8 w-[190px]  sm:flex  lg:w-240 lg:h-104 xl:h-[158px] xl:w-[300px]" />
 
-        <nav className="bg-footerBeige rounded-12 flex overflow-hidden flex-wrap gap-y-64 gap-x-fluid-40 py-48 sm:p-0 ">
+        <nav className="bg-footerBeige rounded-12 flex overflow-hidden flex-wrap gap-y-64 gap-x-fluid-40 md:gap-fluid-96 py-48 sm:p-0 ">
           {footerNavGroups.map((group, i) => {
             return (
               <ul
                 aria-label={`${group.title}`}
                 key={i}
-                className="flex gap-8 md:min-h-[160px] w-[130px] flex-col font-regular before:content-[attr(aria-label)] before:font-medium"
+                className="flex gap-8 md:min-h-[160px] w-[130px] md:w-fit flex-col font-regular before:content-[attr(aria-label)] before:font-medium"
               >
                 {group.navElements.map((element, i) => {
                   return (
@@ -59,32 +59,32 @@ export default async function Footer() {
           })}
         </nav>
 
-        <p className="text-sm opacity-80">©️ 2023 Stefán Snær</p>
-        <div className="flex justify-between w-fill ">
-          <div className="flex w-fill md:w-2/3 lg:w-[55%] justify-end gap-32">
-            <ul className="w-fill flex flex-wrap  text-[9px] sm:text-[12px] md:text-sm md:text-rock justify-around self-center">
+        <p className="text-sm opacity-80 md:hidden">©️ 2023 Stefán Snær</p>
+      </div>
+      <div className="flex justify-between w-fill ">
+        <div className="flex w-fill justify-end md:justify-around gap-32">
+          <ul className="w-fill flex flex-wrap  text-[9px] sm:text-[12px] md:text-sm md:text-rock justify-around self-center">
+            <a
+              href={`https://maps.google.com/maps?q=${content.company_address}`}
+            >
               <li>{content.company_address}</li>
-
-              <li>{content.company_ssd_number}</li>
-
-              <li>
-                <a href={`mailto:${content.company_email}`} target="_blank">
-                  {content.company_email}{' '}
-                  <span className="sr-only">
-                    Opnar tölvupóst í nýjum glugga
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${content.company_phone_number}`}
-                  aria-label={`Hringja í síma ${content.company_phone_number}`}
-                >
-                  {content.company_phone_number}
-                </a>
-              </li>
-            </ul>
-          </div>
+            </a>
+            <li>{content.company_ssd_number}</li>
+            <li>
+              <a href={`mailto:${content.company_email}`} target="_blank">
+                {content.company_email}{' '}
+                <span className="sr-only">Opnar tölvupóst í nýjum glugga</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={`tel:${content.company_phone_number}`}
+                aria-label={`Hringja í síma ${content.company_phone_number}`}
+              >
+                {content.company_phone_number}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
