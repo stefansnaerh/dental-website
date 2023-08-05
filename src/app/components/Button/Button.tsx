@@ -27,7 +27,7 @@ export default function Button({
   return type === 'button' ? (
     <button
       aria-label={ariaLabel}
-      className={`flex gap-8 rounded-12  h-fit w-fit transition-all duration-300 text-md font-poppins ${className}`}
+      className={`flex py-fl gap-8 py-fluid-12 px-fluid-18 shadow-button rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className}`}
       onClick={onClick}
     >
       {icon ? <>{icon}</> : ''}
@@ -38,12 +38,16 @@ export default function Button({
     <PrismicNextLink
       field={href}
       aria-label={ariaLabel}
-      className={`flex py-fl gap-8 py-fluid-12 px-fluid-18 shadow-button rounded-16 h-fit w-fit transition-all duration-300 text-md font-poppins font-medium ${className}`}
+      className={`flex py-fl gap-8 py-fluid-12 px-fluid-18 shadow-button rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className}`}
       onClick={onClick}
     >
       {icon ? <>{icon}</> : ''}
       {text}
-      {arrow ? <ArrowRight className="self-center h-16 w-16" /> : ''}
+      {arrow ? (
+        <ArrowRight className="self-center h-16 w-16 transition-all duration-300" />
+      ) : (
+        ''
+      )}
     </PrismicNextLink>
   )
 }
