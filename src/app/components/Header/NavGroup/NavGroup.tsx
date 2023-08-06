@@ -33,8 +33,8 @@ export default function NavGroup({
                 <ChevronDown
                   className={
                     currentIndex === i && showNav
-                      ? 'rotate-180 h-20 w-20 text-black self-center transition-all duration-300 ease-in-out'
-                      : 'h-20 w-20 text-black self-center transition-all duration-300 ease-in-out'
+                      ? 'rotate-180 h-20 w-20 text-black  self-center transition-all duration-300 ease-in-out'
+                      : 'h-20 w-20 text-black  self-center transition-all duration-300 ease-in-out'
                   }
                 />
               </button>

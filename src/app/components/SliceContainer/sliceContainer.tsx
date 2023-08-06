@@ -5,7 +5,7 @@ interface SliceContainerProps {
   lessPadding?: boolean
 }
 
-export const SliceContainer = (props: SliceContainerProps) => {
+const SliceContainer = (props: SliceContainerProps) => {
   const { lessPadding = false, children } = props
 
   return (
@@ -18,3 +18,5 @@ export const SliceContainer = (props: SliceContainerProps) => {
     </div>
   )
 }
+
+export default SliceContainer

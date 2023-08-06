@@ -257,7 +257,7 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >
 
-type FrontPageDocumentDataSlicesSlice = never
+type FrontPageDocumentDataSlicesSlice = CompanyInfoSlice
 
 /**
  * Content for front_page documents
@@ -635,6 +635,66 @@ export interface CompanyInfoSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *CompanyInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company_info.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField
+
+  /**
+   * Button text field in *CompanyInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company_info.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField
+
+  /**
+   * Button link field in *CompanyInfo → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company_info.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField
+
+  /**
+   * First image field in *CompanyInfo → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company_info.primary.first_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  first_image: prismic.ImageField<never>
+
+  /**
+   * Second image field in *CompanyInfo → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company_info.primary.second_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  second_image: prismic.ImageField<never>
+
+  /**
+   * Third image field in *CompanyInfo → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company_info.primary.third_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  third_image: prismic.ImageField<never>
 }
 
 /**

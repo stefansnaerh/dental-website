@@ -15,6 +15,46 @@
         "title": {
           "type": "Text",
           "config": { "label": "Title", "placeholder": "" }
+        },
+        "paragraph": {
+          "type": "Text",
+          "config": { "label": "Paragraph", "placeholder": "" }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": { "label": "Button text", "placeholder": "" }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "first_image": {
+          "type": "Image",
+          "config": {
+            "label": "First image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "second_image": {
+          "type": "Image",
+          "config": {
+            "label": "Second image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "third_image": {
+          "type": "Image",
+          "config": {
+            "label": "Third image",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}
