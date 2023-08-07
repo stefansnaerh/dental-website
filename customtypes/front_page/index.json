@@ -36,7 +36,8 @@
         "config": {
           "choices": {
             "company_info": { "type": "SharedSlice" },
-            "service_overview": { "type": "SharedSlice" }
+            "service_overview": { "type": "SharedSlice" },
+            "news": { "type": "SharedSlice" }
           }
         }
       }

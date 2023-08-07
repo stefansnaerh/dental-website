@@ -13,7 +13,7 @@ module.exports = {
       lighGrey: '#F5F5F5',
       lightGreyHover: '#865200',
       grey: '#979797',
-      white: '#FFF',
+      white: '#Fcfcfc',
       softWhite: '#FFFBF9',
       black: '#373737',
       headerBeige: '#FCF2EA',

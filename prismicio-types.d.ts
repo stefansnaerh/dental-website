@@ -257,7 +257,10 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >
 
-type FrontPageDocumentDataSlicesSlice = CompanyInfoSlice | ServiceOverviewSlice
+type FrontPageDocumentDataSlicesSlice =
+  | CompanyInfoSlice
+  | ServiceOverviewSlice
+  | NewsSlice
 
 /**
  * Content for front_page documents
@@ -728,6 +731,103 @@ export type CompanyInfoSlice = prismic.SharedSlice<
 >
 
 /**
+ * Primary content in *News → Primary*
+ */
+export interface NewsSliceDefaultPrimary {
+  /**
+   * Title field in *News → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+}
+
+/**
+ * Primary content in *News → Items*
+ */
+export interface NewsSliceDefaultItem {
+  /**
+   * Image field in *News → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+
+  /**
+   * Title field in *News → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *News → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.items[].paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField
+
+  /**
+   * Link text field in *News → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.items[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField
+
+  /**
+   * Link field in *News → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Default variation for News Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NewsSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<NewsSliceDefaultPrimary>,
+  Simplify<NewsSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *News*
+ */
+type NewsSliceVariation = NewsSliceDefault
+
+/**
+ * News Shared Slice
+ *
+ * - **API ID**: `news`
+ * - **Description**: News
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NewsSlice = prismic.SharedSlice<'news', NewsSliceVariation>
+
+/**
  * Primary content in *ServiceOverview → Primary*
  */
 export interface ServiceOverviewSliceDefaultPrimary {
@@ -847,6 +947,9 @@ declare module '@prismicio/client' {
       CompanyInfoSlice,
       CompanyInfoSliceVariation,
       CompanyInfoSliceDefault,
+      NewsSlice,
+      NewsSliceVariation,
+      NewsSliceDefault,
       ServiceOverviewSlice,
       ServiceOverviewSliceVariation,
       ServiceOverviewSliceDefault,
