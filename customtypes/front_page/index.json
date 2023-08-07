@@ -33,7 +33,12 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": { "company_info": { "type": "SharedSlice" } } }
+        "config": {
+          "choices": {
+            "company_info": { "type": "SharedSlice" },
+            "service_overview": { "type": "SharedSlice" }
+          }
+        }
       }
     },
     "SEO & Metadata": {

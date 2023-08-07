@@ -9,6 +9,7 @@ export default function Button({
   text,
   ariaLabel,
   className,
+  noShadow,
   icon,
   arrow,
   type,
@@ -18,6 +19,7 @@ export default function Button({
   text?: KeyTextField
   ariaLabel?: string | undefined
   className?: string
+  noShadow?: boolean
   icon?: ReactNode
   arrow?: boolean
   type: 'button' | 'anchor'
@@ -27,7 +29,9 @@ export default function Button({
   return type === 'button' ? (
     <button
       aria-label={ariaLabel}
-      className={`flex py-fl gap-8 py-fluid-12 px-fluid-18 shadow-button rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className}`}
+      className={`flex py-fl gap-8 py-fluid-12 px-fluid-18 shadow-button rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
+        noShadow ? '' : 'shadow-button '
+      }`}
       onClick={onClick}
     >
       {icon ? <>{icon}</> : ''}
@@ -38,13 +42,15 @@ export default function Button({
     <PrismicNextLink
       field={href}
       aria-label={ariaLabel}
-      className={`flex py-fl gap-8 py-fluid-12 px-fluid-18 shadow-button rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className}`}
+      className={`group flex py-fl gap-4 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
+        noShadow ? '' : 'shadow-button '
+      }`}
       onClick={onClick}
     >
       {icon ? <>{icon}</> : ''}
       {text}
       {arrow ? (
-        <ArrowRight className="self-center h-16 w-16 transition-all duration-300" />
+        <ArrowRight className="self-center h-16 w-32 transition-all duration-300 group-hover:pl-16  " />
       ) : (
         ''
       )}

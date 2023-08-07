@@ -10,10 +10,14 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      lighGrey: '#F5F5F5',
+      lightGreyHover: '#865200',
+      grey: '#979797',
       white: '#FFF',
       softWhite: '#FFFBF9',
       black: '#373737',
       headerBeige: '#FCF2EA',
+      beigeLighter: '#FFFCF9',
       footerBeige: '#FFE8CB',
       orange: '#F8B040',
       orangeHover: '#FFCC7D',
@@ -158,6 +162,7 @@ module.exports = {
       aspectRatio: {
         '5/6': '5 / 6',
         '8/7': '8 / 7',
+        '9/10': '9 / 10',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -20,7 +20,7 @@ export default function NavGroup({
 
   return (
     <>
-      {headerNavGroups.map((group, i) => {
+      {headerNavGroups?.map((group, i) => {
         return (
           <div key={i} className="flex">
             <li>

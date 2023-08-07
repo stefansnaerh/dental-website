@@ -27,7 +27,7 @@ export default async function Home() {
 
   return (
     <section className="relative font-poppins">
-      <div className="relative w-fill  overflow-hidden pb-fluid-96">
+      <div className="relative w-fill  overflow-hidden pb-fluid-96 bg-beigeLighter">
         <div className="relative lg:pb-[60%] xxs:pb-[150%] md:pb-[70%] xl:pb-[45%]  sm:pb-[90%] pb-[165%]">
           <PrismicNextImage
             field={content.hero_image}

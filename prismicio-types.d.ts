@@ -257,7 +257,7 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >
 
-type FrontPageDocumentDataSlicesSlice = CompanyInfoSlice
+type FrontPageDocumentDataSlicesSlice = CompanyInfoSlice | ServiceOverviewSlice
 
 /**
  * Content for front_page documents
@@ -727,6 +727,106 @@ export type CompanyInfoSlice = prismic.SharedSlice<
   CompanyInfoSliceVariation
 >
 
+/**
+ * Primary content in *ServiceOverview → Primary*
+ */
+export interface ServiceOverviewSliceDefaultPrimary {
+  /**
+   * Title field in *ServiceOverview → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *ServiceOverview → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField
+}
+
+/**
+ * Primary content in *ServiceOverview → Items*
+ */
+export interface ServiceOverviewSliceDefaultItem {
+  /**
+   * Title field in *ServiceOverview → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *ServiceOverview → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.items[].paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField
+
+  /**
+   * Link text field in *ServiceOverview → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.items[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField
+
+  /**
+   * Link field in *ServiceOverview → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Default variation for ServiceOverview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServiceOverviewSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ServiceOverviewSliceDefaultPrimary>,
+  Simplify<ServiceOverviewSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *ServiceOverview*
+ */
+type ServiceOverviewSliceVariation = ServiceOverviewSliceDefault
+
+/**
+ * ServiceOverview Shared Slice
+ *
+ * - **API ID**: `service_overview`
+ * - **Description**: ServiceOverview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServiceOverviewSlice = prismic.SharedSlice<
+  'service_overview',
+  ServiceOverviewSliceVariation
+>
+
 declare module '@prismicio/client' {
   interface CreateClient {
     (
@@ -747,6 +847,9 @@ declare module '@prismicio/client' {
       CompanyInfoSlice,
       CompanyInfoSliceVariation,
       CompanyInfoSliceDefault,
+      ServiceOverviewSlice,
+      ServiceOverviewSliceVariation,
+      ServiceOverviewSliceDefault,
     }
   }
 }
