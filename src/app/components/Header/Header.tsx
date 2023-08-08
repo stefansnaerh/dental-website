@@ -34,7 +34,7 @@ export default async function Header() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 justify-between flex bg-headerBeige h-[90px] xs:h-[100px] md:h-[120px] z-50 font-poppins text-md font-regular text-black ">
+    <header className="fixed top-0  left-0 right-0 justify-between flex bg-headerBeige h-[90px] xs:h-[100px] md:h-[120px] z-50 font-poppins text-md font-regular text-black ">
       <Logo className="h-[90px] xs:h-[100px] md:h-120 lg:w-[200px] w-[180px] pl-24" />
 
       {/*------------------------ Mobile Navigation ---------------------------------------*/}
