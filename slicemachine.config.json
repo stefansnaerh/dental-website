@@ -1,7 +1,6 @@
 {
-    "apiEndpoint": "https://apiko-website.cdn.prismic.io/api/v2",
-    "repositoryName": "apiko-website",
-    "adapter": "@slicemachine/adapter-next",
-    "libraries": ["./slices"]
-  }
-  
+  "apiEndpoint": "https://apiko-website.prismic.io/api/v2",
+  "repositoryName": "apiko-website",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}
