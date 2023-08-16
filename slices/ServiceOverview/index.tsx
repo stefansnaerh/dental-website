@@ -54,7 +54,7 @@ const ServiceOverview = ({ slice }: ServiceOverviewProps): JSX.Element => {
                   {item.paragraph}
                 </p>
 
-                <div className="flex self-end lg:pt-fluid-12">
+                <div className="flex self-end pt-fluid-24">
                   <p className="text-paragraph font-medium ">
                     {item.link_text}
                   </p>
