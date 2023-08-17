@@ -48,13 +48,13 @@ export default async function Apiko() {
             </Fade>
           )}
           {section.paragraph && (
-            <Fade className="text-paragraph font-regular ">
-              <p>{section.paragraph}</p>
+            <Fade className=" lg:w-[90%] ">
+              <p className="text-paragraph font-regular">{section.paragraph}</p>
             </Fade>
           )}
         </div>
         {section.image && (
-          <div className="hidden md:flex relative md:overflow-hidden md:w-[70%] self-start ">
+          <Fade className="hidden md:flex relative md:overflow-hidden md:w-[65%] self-start ">
             <div className="relative  pb-[75%] lg:pb-[65%] xl:pb-[60%] w-fill">
               <PrismicNextImage
                 field={section.image}
@@ -64,7 +64,7 @@ export default async function Apiko() {
                 fill
               />
             </div>
-          </div>
+          </Fade>
         )}
       </SliceContainer>
 

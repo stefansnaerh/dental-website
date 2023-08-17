@@ -28,7 +28,6 @@ export default function RootLayout({
           {children}
           <Contact />
         </main>
-
         <Footer />
       </body>
       <PrismicPreview repositoryName={repositoryName} />

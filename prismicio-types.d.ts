@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
-type AboutUsDocumentDataSlicesSlice = never
+type AboutUsDocumentDataSlicesSlice = CarouselSlice
 
 /**
  * Content for About us documents
@@ -814,6 +814,76 @@ export type AllDocumentTypes =
   | HeaderDocument
 
 /**
+ * Primary content in *Carousel → Primary*
+ */
+export interface CarouselSliceDefaultPrimary {
+  /**
+   * Title field in *Carousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *Carousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField
+}
+
+/**
+ * Primary content in *Carousel → Items*
+ */
+export interface CarouselSliceDefaultItem {
+  /**
+   * Image field in *Carousel → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+}
+
+/**
+ * Default variation for Carousel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<CarouselSliceDefaultPrimary>,
+  Simplify<CarouselSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *Carousel*
+ */
+type CarouselSliceVariation = CarouselSliceDefault
+
+/**
+ * Carousel Shared Slice
+ *
+ * - **API ID**: `carousel`
+ * - **Description**: Carousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselSlice = prismic.SharedSlice<
+  'carousel',
+  CarouselSliceVariation
+>
+
+/**
  * Primary content in *CompanyInfo → Primary*
  */
 export interface CompanyInfoSliceDefaultPrimary {
@@ -1136,6 +1206,9 @@ declare module '@prismicio/client' {
       HeaderDocument,
       HeaderDocumentData,
       AllDocumentTypes,
+      CarouselSlice,
+      CarouselSliceVariation,
+      CarouselSliceDefault,
       CompanyInfoSlice,
       CompanyInfoSliceVariation,
       CompanyInfoSliceDefault,
