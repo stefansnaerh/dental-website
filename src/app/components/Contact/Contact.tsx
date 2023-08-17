@@ -37,7 +37,7 @@ export default async function Contact() {
               type="a"
               icon={<Location className="self-center" />}
               text={content.location}
-              className="bg-brown text-white self-center"
+              className="bg-brown text-white self-center "
               aHref={`https://maps.google.com/maps?q=${content.location}`}
               aria-label={`Opna leiðsögn til ${content.location} á Google Maps í nýjum glugga`}
             ></Button>
