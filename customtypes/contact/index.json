@@ -1,0 +1,35 @@
+{
+  "id": "contact",
+  "label": "Contact",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "email_paragraph": {
+        "type": "Text",
+        "config": { "label": "Email paragraph", "placeholder": "" }
+      },
+      "email": {
+        "type": "Text",
+        "config": { "label": "Email", "placeholder": "" }
+      },
+      "location_paragraph": {
+        "type": "Text",
+        "config": { "label": "Location paragraph", "placeholder": "" }
+      },
+      "location": {
+        "type": "Text",
+        "config": { "label": "Location", "placeholder": "" }
+      },
+      "phone_paragraph": {
+        "type": "Text",
+        "config": { "label": "Phone paragraph", "placeholder": "" }
+      },
+      "phone_number": {
+        "type": "Text",
+        "config": { "label": "Phone number", "placeholder": "" }
+      }
+    }
+  }
+}

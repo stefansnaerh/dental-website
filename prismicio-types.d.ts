@@ -5,6 +5,93 @@ import type * as prismic from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 /**
+ * Content for Contact documents
+ */
+interface ContactDocumentData {
+  /**
+   * Email paragraph field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.email_paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_paragraph: prismic.KeyTextField
+
+  /**
+   * Email field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField
+
+  /**
+   * Location paragraph field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.location_paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  location_paragraph: prismic.KeyTextField
+
+  /**
+   * Location field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.location
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  location: prismic.KeyTextField
+
+  /**
+   * Phone paragraph field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.phone_paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_paragraph: prismic.KeyTextField
+
+  /**
+   * Phone number field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.phone_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number: prismic.KeyTextField
+}
+
+/**
+ * Contact document from Prismic
+ *
+ * - **API ID**: `contact`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ContactDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ContactDocumentData>,
+    'contact',
+    Lang
+  >
+
+/**
  * Item in *Footer → Link group 1*
  */
 export interface FooterDocumentDataLinkGroup1Item {
@@ -621,6 +708,7 @@ export type HeaderDocument<Lang extends string = string> =
   >
 
 export type AllDocumentTypes =
+  | ContactDocument
   | FooterDocument
   | FrontPageDocument
   | HeaderDocument
@@ -937,6 +1025,8 @@ declare module '@prismicio/client' {
 
   namespace Content {
     export type {
+      ContactDocument,
+      ContactDocumentData,
       FooterDocument,
       FooterDocumentData,
       FrontPageDocument,

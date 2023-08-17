@@ -42,7 +42,7 @@ const News = ({ slice }: NewsProps): JSX.Element => {
                       priority
                       fill
                     />
-                    <div className="absolute h-full z-20 w-fill flex flex-col gap-fluid-12  px-fluid-32 pt-fluid-32 ">
+                    <div className="absolute h-full z-20 w-fill flex flex-col gap-fluid-12  px-fluid-32 pt-fluid-32 xxs:px-fluid-40 xxs:pt-fluid-40 ">
                       <div className="w-fill flex justify-between">
                         <h3 className="text-h3 text-white font-medium">
                           {item.title}
@@ -67,7 +67,7 @@ const News = ({ slice }: NewsProps): JSX.Element => {
           })}
         </div>
         {/* -------------------------   Showes on 768px    --------------------------------------- */}
-        <div className="sm:flex sm:flex-col gap-fluid-32 lg:gap-fluid-48">
+        <div className="hidden sm:flex sm:flex-col gap-fluid-32 lg:gap-fluid-48">
           {slice.items.map((item, i) => {
             return (
               <Fade key={i}>
@@ -95,7 +95,7 @@ const News = ({ slice }: NewsProps): JSX.Element => {
                       <AcademicCap className="w-32 h-32 md:h-40 md:w-40 text-black" />
                     </Fade>
                     <div className="w-fill h-[1px] bg-black opacity-20 px-fluid-32"></div>
-                    <p className="text-paragraph text-black font-regular line-clamp-4 pt-16">
+                    <p className="text-md text-black font-regular line-clamp-4 pt-16">
                       {item.paragraph}
                     </p>
                     <Button

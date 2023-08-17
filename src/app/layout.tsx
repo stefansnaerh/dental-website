@@ -13,6 +13,7 @@ import { repositoryName } from '../../prismicio'
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Contact from './components/Contact/Contact'
 
 export default function RootLayout({
   children,
@@ -21,11 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} `}>
-      <body className=" ">
+      <body className="">
         <Header />
         <main className="flex flex-col mt-[90px] xs:mt-[100px]  min-h-[calc(100vh-90px)] xs:min-h-[calc(100vh-100px)]   md:min-h-[calc(100vh-120px)] md:mt-120 w-full max-w-screen-xxl mx-auto">
           {children}
         </main>
+        <Contact />
         <Footer />
       </body>
       <PrismicPreview repositoryName={repositoryName} />

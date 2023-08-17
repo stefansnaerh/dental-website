@@ -14,6 +14,7 @@ export default function Button({
   arrow,
   type,
   href,
+  aHref,
   onClick,
 }: {
   text?: KeyTextField
@@ -22,8 +23,9 @@ export default function Button({
   noShadow?: boolean
   icon?: ReactNode
   arrow?: boolean
-  type: 'button' | 'anchor' | 'none'
-  href: LinkField
+  type: 'button' | 'anchor' | 'none' | 'a'
+  href?: LinkField
+  aHref?: string
   onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement | undefined>
 }) {
   if (type === 'button') {
@@ -45,7 +47,7 @@ export default function Button({
       <PrismicNextLink
         field={href}
         aria-label={ariaLabel}
-        className={`group flex py-fl gap-4 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
+        className={`group flex  py-fl gap-8 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
           noShadow ? '' : 'shadow-button '
         }`}
         onClick={onClick}
@@ -59,10 +61,10 @@ export default function Button({
         )}
       </PrismicNextLink>
     )
-  } else {
+  } else if (type === 'none') {
     return (
       <div
-        className={`group flex py-fl gap-4 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
+        className={`group flex py-fl gap-8 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
           noShadow ? '' : 'shadow-button '
         }`}
       >
@@ -74,6 +76,23 @@ export default function Button({
           ''
         )}
       </div>
+    )
+  } else {
+    return (
+      <a
+        href={aHref}
+        className={`group flex py-fl gap-8 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
+          noShadow ? '' : 'shadow-button '
+        }`}
+      >
+        {icon ? <>{icon}</> : ''}
+        {text}
+        {arrow ? (
+          <ArrowRight className="self-center h-16 w-32 transition-all duration-300 group-hover:pl-16  " />
+        ) : (
+          ''
+        )}
+      </a>
     )
   }
 }

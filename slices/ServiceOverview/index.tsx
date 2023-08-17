@@ -30,9 +30,9 @@ const ServiceOverview = ({ slice }: ServiceOverviewProps): JSX.Element => {
             </div>
           )}
           {section.paragraph && (
-            <p className="text-paragraph font-regular md:max-w-[60%]  ">
+            <h3 className="text-paragraph font-regular md:max-w-[60%]  ">
               {section.paragraph}
-            </p>
+            </h3>
           )}
         </Fade>
         <Fade className="flex noScrollbar gap-fluid-24 sm:gap-fluid-32 lg:gap-fluid-48 overflow-scroll snap-x snap-mandatory lg:overflow-hidden lg:flex-wrap lg:justify-center">
@@ -50,7 +50,7 @@ const ServiceOverview = ({ slice }: ServiceOverviewProps): JSX.Element => {
                   <ToothIcon className="text-orange h-32 w-32 sm:h-40 sm:w-40 self-center group-hover:text-white transition-all duration-300" />
                 </div>
                 <span className="h-[1px] w-fill  bg-grey opacity-20 group-hover:bg-white"></span>
-                <p className="text-paragraph font-regular line-clamp-4">
+                <p className="text-md font-regular line-clamp-4">
                   {item.paragraph}
                 </p>
 
