@@ -29,7 +29,7 @@ export default async function Contact() {
             ></Button>
           </Fade>
           <div className="w-fill h-[3px] rounded-32 bg-orange  md:w-[4px] md:h-[170px] lg:h-[200px] xl:h-[240px] md:self-center"></div>
-          <Fade className="flex flex-col gap-fluid-32 md:justify-between ">
+          <Fade className="flex  flex-col gap-fluid-32 md:justify-between ">
             <p className="text-center text-paragraph w-[90%] font-regular md:max-w-[270px] md:self-center">
               {content.location_paragraph}
             </p>
