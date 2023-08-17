@@ -140,6 +140,7 @@ module.exports = {
       'fluid-72': 'clamp(56px, 4.17vw, 72px)',
       'fluid-80': 'clamp(64px, 4.6vw, 80px)',
       'fluid-96': 'clamp(80px, 5.5vw, 96px)',
+      'fluid-122': 'clamp(96px, 6.5vw, 122px)',
       'fluid-144': 'clamp(6.4rem, 4.045rem + 5.993vw, 14.4rem)',
       'fluid-192': 'clamp(128px, 11.11 vw, 192px)',
       'fluid-324': 'clamp(256px, 18.75vw, 324px)',

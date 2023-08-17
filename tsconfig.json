@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/(website)/companyPage"
+    "src/app/(website)/company_page"
   ],
   "exclude": ["node_modules"]
 }

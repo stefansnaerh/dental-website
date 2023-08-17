@@ -4,12 +4,45 @@ import type * as prismic from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
-type AboutUsDocumentDataSlicesSlice = NewsSlice
+type AboutUsDocumentDataSlicesSlice = never
 
 /**
  * Content for About us documents
  */
 interface AboutUsDocumentData {
+  /**
+   * Title field in *About us*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *About us*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField
+
+  /**
+   * Image field in *About us*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+
   /**
    * Slice Zone field in *About us*
    *

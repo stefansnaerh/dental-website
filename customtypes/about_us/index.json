@@ -6,10 +6,22 @@
   "status": true,
   "json": {
     "Main": {
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title", "placeholder": "" }
+      },
+      "paragraph": {
+        "type": "Text",
+        "config": { "label": "Paragraph", "placeholder": "" }
+      },
+      "image": {
+        "type": "Image",
+        "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": { "news": { "type": "SharedSlice" } } }
+        "config": { "choices": {} }
       }
     },
     "SEO & Metadata": {
