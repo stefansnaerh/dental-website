@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 import { createClient } from '../../../../prismicio'
-import { CompanyPageDocument } from '../../../../prismicio-types'
+import { AboutUsDocument } from '../../../../prismicio-types'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../../../../slices'
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
-  const page = await client.getSingle('company_page')
+  const page = await client.getSingle('about_us')
 
   return {
     title: page.data.meta_title,
@@ -14,10 +14,10 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function CompanyPage() {
+export default async function Apiko() {
   const client = createClient()
 
-  const page = await client.getSingle<CompanyPageDocument>('company_page')
+  const page = await client.getSingle<AboutUsDocument>('about_us')
 
   return (
     <main>

@@ -1,13 +1,13 @@
 import { Metadata } from 'next'
-import { createClient } from '../../prismicio'
-import { FrontPageDocument } from '../../prismicio-types'
+import { createClient } from '../../../prismicio'
+import { FrontPageDocument } from '../../../prismicio-types'
 import { SliceZone } from '@prismicio/react'
-import { components } from '../../slices'
+import { components } from '../../../slices'
 import { PrismicNextImage } from '@prismicio/next'
 
-import { Fade } from './components/Fade/fade'
-import Button from './components/Button/Button'
-import CalendarIcon from './icons/Calendar.svg'
+import { Fade } from '../components/Fade/fade'
+import Button from '../components/Button/Button'
+import CalendarIcon from '@/src/app/icons//Calendar.svg'
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()

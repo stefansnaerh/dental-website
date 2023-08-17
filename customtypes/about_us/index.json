@@ -1,6 +1,6 @@
 {
-  "id": "company_page",
-  "label": "company page",
+  "id": "about_us",
+  "label": "About us",
   "format": "page",
   "repeatable": false,
   "status": true,
@@ -9,7 +9,7 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": { "company_info": { "type": "SharedSlice" } } }
+        "config": { "choices": { "news": { "type": "SharedSlice" } } }
       }
     },
     "SEO & Metadata": {

@@ -4,50 +4,50 @@ import type * as prismic from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
-type CompanyPageDocumentDataSlicesSlice = CompanyInfoSlice
+type AboutUsDocumentDataSlicesSlice = NewsSlice
 
 /**
- * Content for company page documents
+ * Content for About us documents
  */
-interface CompanyPageDocumentData {
+interface AboutUsDocumentData {
   /**
-   * Slice Zone field in *company page*
+   * Slice Zone field in *About us*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: company_page.slices[]
+   * - **API ID Path**: about_us.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<CompanyPageDocumentDataSlicesSlice>
+  slices: prismic.SliceZone<AboutUsDocumentDataSlicesSlice>
   /**
-   * Meta Description field in *company page*
+   * Meta Description field in *About us*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: company_page.meta_description
+   * - **API ID Path**: about_us.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_description: prismic.KeyTextField
 
   /**
-   * Meta Image field in *company page*
+   * Meta Image field in *About us*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: company_page.meta_image
+   * - **API ID Path**: about_us.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>
 
   /**
-   * Meta Title field in *company page*
+   * Meta Title field in *About us*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: company_page.meta_title
+   * - **API ID Path**: about_us.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
@@ -55,18 +55,18 @@ interface CompanyPageDocumentData {
 }
 
 /**
- * company page document from Prismic
+ * About us document from Prismic
  *
- * - **API ID**: `company_page`
+ * - **API ID**: `about_us`
  * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type CompanyPageDocument<Lang extends string = string> =
+export type AboutUsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
-    Simplify<CompanyPageDocumentData>,
-    'company_page',
+    Simplify<AboutUsDocumentData>,
+    'about_us',
     Lang
   >
 
@@ -774,7 +774,7 @@ export type HeaderDocument<Lang extends string = string> =
   >
 
 export type AllDocumentTypes =
-  | CompanyPageDocument
+  | AboutUsDocument
   | ContactDocument
   | FooterDocument
   | FrontPageDocument
@@ -1092,8 +1092,8 @@ declare module '@prismicio/client' {
 
   namespace Content {
     export type {
-      CompanyPageDocument,
-      CompanyPageDocumentData,
+      AboutUsDocument,
+      AboutUsDocumentData,
       ContactDocument,
       ContactDocumentData,
       FooterDocument,
