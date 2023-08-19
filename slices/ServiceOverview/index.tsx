@@ -41,7 +41,7 @@ const ServiceOverview = ({ slice }: ServiceOverviewProps): JSX.Element => {
               <PrismicNextLink
                 field={item.link}
                 key={index}
-                className="flex group flex-col gap-fluid-32 md:gap-fluid-40  min-w-[80%] snap-x snap-mandatory bg-lighGrey hover:bg-lightGreyHover hover:text-softWhite px-fluid-40 md:px-fluid-48 pt-fluid-40 md:pt-fluid-48 pb-fluid-32 md:pb-fluid-40 rounded-12 shadow-lg transition-all duration-300 ease-in-out sm:min-w-[60%] md:min-w-[45%] lg:min-w-[30%] lg:max-w-[30%]"
+                className="flex group flex-col gap-fluid-32 md:gap-fluid-40  min-w-[80%] snap-x snap-mandatory snap-always snap-center bg-lighGrey hover:bg-lightGreyHover hover:text-softWhite px-fluid-40 md:px-fluid-48 pt-fluid-40 md:pt-fluid-48 pb-fluid-32 md:pb-fluid-40 rounded-12 shadow-lg transition-all duration-300 ease-in-out sm:min-w-[60%] md:min-w-[45%] lg:min-w-[30%] lg:max-w-[30%]"
               >
                 <div className="flex justify-between">
                   <h3 className="text-h3 font-regular self-center">

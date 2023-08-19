@@ -25,7 +25,7 @@ export default async function Contact() {
               text={content.email}
               aHref={`mailto:${content.email}`}
               aria-label={`Opnar tölvupóst til ${content.email} í nýjum glugga`}
-              className="bg-brown text-white self-center"
+              className="bg-brown text-white self-center hover:bg-brownHover transform duration-300"
             ></Button>
           </Fade>
           <div className="w-fill h-[3px] rounded-32 bg-orange  md:w-[4px] md:h-[170px] lg:h-[200px] xl:h-[240px] md:self-center"></div>
@@ -37,7 +37,7 @@ export default async function Contact() {
               type="a"
               icon={<Location className="self-center" />}
               text={content.location}
-              className="bg-brown text-white self-center "
+              className="bg-brown text-white self-center hover:bg-brownHover transform duration-300 "
               aHref={`https://maps.google.com/maps?q=${content.location}`}
               aria-label={`Opna leiðsögn til ${content.location} á Google Maps í nýjum glugga`}
             ></Button>
@@ -51,9 +51,9 @@ export default async function Contact() {
               type="a"
               text={content.phone_number}
               icon={
-                <Phone className="self-center h-18 w-18 md:h-20 md:w-20 lg:h-22 lg:w-22" />
+                <Phone className="self-center h-18 w-18 md:h-20 md:w-20 lg:h-22 lg:w-22 " />
               }
-              className="bg-brown text-white self-center "
+              className="bg-brown text-white self-center hover:bg-brownHover transform duration-300 "
               aHref={`tel:${content.phone_number}`}
               aria-label={`Hringja í síma ${content.phone_number} `}
             ></Button>

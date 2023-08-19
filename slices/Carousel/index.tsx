@@ -8,33 +8,42 @@ export type CarouselProps = SliceComponentProps<Content.CarouselSlice>
 
 const Carousel = ({ slice }: CarouselProps): JSX.Element => {
   const section = slice.primary
+
   return (
     <SliceContainer>
-      <section className="font-poppins overflow-hidden flex flex-col gap-fluid-56">
-        <Fade className="flex flex-col gap gap-fluid-40 lg:gap-fluid-48">
-          <h2 className="text-h2  w-[80%] ">{section.title}</h2>
-          <h3 className=" text-paragraph font-regular">{section.paragraph}</h3>
+      <section className="font-poppins overflow-hidden flex flex-col gap-fluid-56 md:gap-fluid-96">
+        <Fade className="flex flex-col gap gap-fluid-40 lg:gap-fluid-48 md:flex-row md:gap-fluid-64">
+          {section.title && (
+            <h2 className="text-h2  w-[80%] md:w-[50%]">{section.title}</h2>
+          )}
+          {section.paragraph && (
+            <h3 className=" text-paragraph font-regular md:w-[50%]">
+              {section.paragraph}
+            </h3>
+          )}
         </Fade>
-        <Fade className="flex noScrollbar gap-fluid-24 sm:gap-fluid-32 lg:gap-fluid-48 overflow-scroll snap-x snap-mandatory">
-          {slice.items.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="relative overflow-hidden w-fill snap-x snap-mandatory px-fluid-8 md:hidden min-w-[85%]"
-              >
-                <div className="relative pb-[110%] ">
-                  <PrismicNextImage
-                    field={item.image}
-                    className="object-cover z-0 rounded-12"
-                    imgixParams={{ fit: 'crop' }}
-                    priority
-                    fill
-                  />
+        {slice.items && (
+          <Fade className="flex noScrollbar gap-fluid-24 sm:gap-fluid-32 lg:gap-fluid-48 overflow-scroll snap-x snap-mandatory">
+            {slice.items.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="relative overflow-hidden w-fill snap-x snap-mandatory snap-always snap-center px-fluid-8  min-w-[85%] xs:min-w-[70%] md:min-w-[40%] lg:min-w-[30%] "
+                >
+                  <div className="relative pb-[110%] xxs:pb-[100%] xs:pb-[90%] ">
+                    <PrismicNextImage
+                      field={item.image}
+                      className="object-cover z-0 rounded-12"
+                      imgixParams={{ fit: 'crop' }}
+                      fill
+                      sizes=""
+                    />
+                  </div>
                 </div>
-              </div>
-            )
-          })}
-        </Fade>
+              )
+            })}
+          </Fade>
+        )}
       </section>
     </SliceContainer>
   )

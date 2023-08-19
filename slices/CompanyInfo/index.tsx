@@ -32,7 +32,7 @@ const CompanyInfo = ({ slice }: CompanyInfoProps): JSX.Element => {
             ></Button>
           )}
         </Fade>
-        <Fade className="flex noScrollbar gap-fluid-24 overflow-scroll snap-x snap-mandatory sm:overflow-hidden sm:grid sm:grid-cols-5 sm:grid-rows-2 md:w-[60%]">
+        <Fade className="flex noScrollbar gap-fluid-24 overflow-scroll snap-x snap-mandatory snap-always snap-center sm:overflow-hidden sm:grid sm:grid-cols-5 sm:grid-rows-2 md:w-[60%]">
           {section.first_image && (
             <div className="relative snap-center  min-w-[80%] overflow-hidden sm:min-w-[60%] sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
               <div className="relative pb-[110%] sm:pb-[122%] ">
@@ -48,7 +48,7 @@ const CompanyInfo = ({ slice }: CompanyInfoProps): JSX.Element => {
           )}
 
           {section.second_image && (
-            <div className="relative min-w-[80%] snap-center overflow-hidden sm:min-w-[40%] sm:col-start-4 sm:col-end-6 sm:row-start-1 sm:row-end-1">
+            <div className="relative min-w-[80%]  snap-x snap-mandatory snap-always snap-center overflow-hidden sm:min-w-[40%] sm:col-start-4 sm:col-end-6 sm:row-start-1 sm:row-end-1">
               <div className="relative pb-[110%]  sm:pb-[90%]">
                 <PrismicNextImage
                   field={section.second_image}
@@ -61,7 +61,7 @@ const CompanyInfo = ({ slice }: CompanyInfoProps): JSX.Element => {
             </div>
           )}
           {section.third_image && (
-            <div className="relative w-fill min-w-[80%] snap-center  overflow-hidden sm:min-w-[40%] sm:col-start-4 sm:col-end-6 sm:row-start-2 sm:row-end-4">
+            <div className="relative w-fill min-w-[80%]  snap-x snap-mandatory snap-always snap-center overflow-hidden sm:min-w-[40%] sm:col-start-4 sm:col-end-6 sm:row-start-2 sm:row-end-4">
               <div className="relative pb-[110%] sm:pb-[90%]">
                 <PrismicNextImage
                   field={section.third_image}
