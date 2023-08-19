@@ -53,7 +53,10 @@ module.exports = {
         'clamp(1.6rem, 1.364rem + 0.599vw, 2.4rem)',
         { lineHeight: '1.38', letterSpacing: '0em' },
       ],
-
+      lg: [
+        'clamp(2rem, 1.882rem + 0.479vw, 2.4rem)',
+        { lineHeight: '1.38', letterSpacing: '0em' },
+      ],
       h1: [
         'clamp(2.8rem, 2.447rem + 0.899vw, 4rem)',
         { lineHeight: '1.08', letterSpacing: '-0.02em' },
@@ -88,6 +91,7 @@ module.exports = {
       sm: '768px', //* => @media (min-width: 768px) { ... }
       md: '1024px', //* => @media (min-width: 1024px) { ... }
       lg: '1280px', //* => @media (min-width: 1280px) { ... }
+      lg2: '1424px', //* => @media (min-width: 1366px) { ... }
       xl: '1664px', //* => @media (min-width: 1664px) { ... }
       xxl: '1920px', //* => @media (min-width: 1920px) { ... }
       xxxl: '2080px', //* => @media (min-width: 2080px) { ... }

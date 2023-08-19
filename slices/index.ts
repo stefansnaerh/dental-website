@@ -7,4 +7,5 @@ export const components = {
   company_info: dynamic(() => import('./CompanyInfo')),
   news: dynamic(() => import('./News')),
   service_overview: dynamic(() => import('./ServiceOverview')),
+  work_force: dynamic(() => import('./WorkForce')),
 }

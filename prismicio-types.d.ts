@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
-type AboutUsDocumentDataSlicesSlice = CarouselSlice
+type AboutUsDocumentDataSlicesSlice = CarouselSlice | WorkForceSlice
 
 /**
  * Content for About us documents
@@ -1185,6 +1185,86 @@ export type ServiceOverviewSlice = prismic.SharedSlice<
   ServiceOverviewSliceVariation
 >
 
+/**
+ * Primary content in *WorkForce → Primary*
+ */
+export interface WorkForceSliceDefaultPrimary {
+  /**
+   * Title field in *WorkForce → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_force.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+}
+
+/**
+ * Primary content in *WorkForce → Items*
+ */
+export interface WorkForceSliceDefaultItem {
+  /**
+   * Image field in *WorkForce → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_force.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+
+  /**
+   * Name field in *WorkForce → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_force.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField
+
+  /**
+   * Education field in *WorkForce → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_force.items[].education
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  education: prismic.KeyTextField
+}
+
+/**
+ * Default variation for WorkForce Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WorkForceSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<WorkForceSliceDefaultPrimary>,
+  Simplify<WorkForceSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *WorkForce*
+ */
+type WorkForceSliceVariation = WorkForceSliceDefault
+
+/**
+ * WorkForce Shared Slice
+ *
+ * - **API ID**: `work_force`
+ * - **Description**: WorkForce
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WorkForceSlice = prismic.SharedSlice<
+  'work_force',
+  WorkForceSliceVariation
+>
+
 declare module '@prismicio/client' {
   interface CreateClient {
     (
@@ -1218,6 +1298,9 @@ declare module '@prismicio/client' {
       ServiceOverviewSlice,
       ServiceOverviewSliceVariation,
       ServiceOverviewSliceDefault,
+      WorkForceSlice,
+      WorkForceSliceVariation,
+      WorkForceSliceDefault,
     }
   }
 }

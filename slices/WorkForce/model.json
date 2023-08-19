@@ -1,0 +1,36 @@
+{
+  "id": "work_force",
+  "type": "SharedSlice",
+  "name": "WorkForce",
+  "description": "WorkForce",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "name": {
+          "type": "Text",
+          "config": { "label": "Name", "placeholder": "" }
+        },
+        "education": {
+          "type": "Text",
+          "config": { "label": "Education", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

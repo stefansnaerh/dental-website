@@ -12,9 +12,11 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
   return (
     <SliceContainer>
       <section className="font-poppins overflow-hidden flex flex-col gap-fluid-56 md:gap-fluid-96">
-        <Fade className="flex flex-col gap gap-fluid-40 lg:gap-fluid-48 md:flex-row md:gap-fluid-64">
+        <Fade className="flex flex-col gap gap-fluid-40 lg:gap-fluid-48 md:flex-row md:justify-between">
           {section.title && (
-            <h2 className="text-h2  w-[80%] md:w-[50%]">{section.title}</h2>
+            <h2 className="text-h2  w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]">
+              {section.title}
+            </h2>
           )}
           {section.paragraph && (
             <h3 className=" text-paragraph font-regular md:w-[50%]">
@@ -28,7 +30,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
               return (
                 <div
                   key={index}
-                  className="relative overflow-hidden w-fill snap-x snap-mandatory snap-always snap-center px-fluid-8  min-w-[85%] xs:min-w-[70%] md:min-w-[40%] lg:min-w-[30%] "
+                  className="relative overflow-hidden w-fill snap-x snap-mandatory snap-always snap-center px-fluid-8  min-w-[85%] xs:min-w-[70%] md:min-w-[40%] lg:min-w-[28%] "
                 >
                   <div className="relative pb-[110%] xxs:pb-[100%] xs:pb-[90%] ">
                     <PrismicNextImage

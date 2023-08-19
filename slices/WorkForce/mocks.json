@@ -1,0 +1,60 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "facing",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+								"width": 5848,
+								"height": 3899
+							},
+							"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+							"width": 5848,
+							"height": 3899,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "mice",
+							"type": "Text"
+						}
+					],
+					[
+						"education",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "second",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

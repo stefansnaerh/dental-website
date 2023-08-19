@@ -21,7 +21,12 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": { "carousel": { "type": "SharedSlice" } } }
+        "config": {
+          "choices": {
+            "carousel": { "type": "SharedSlice" },
+            "work_force": { "type": "SharedSlice" }
+          }
+        }
       }
     },
     "SEO & Metadata": {
