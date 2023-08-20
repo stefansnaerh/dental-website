@@ -12,9 +12,14 @@ export default async function Contact() {
 
   const content = data.data
 
+  console.log(data)
+
   return (
     <SliceContainer>
-      <section className="w-fill flex justify-center font-poppins ">
+      <section
+        id={data.uid}
+        className="w-fill flex justify-center font-poppins "
+      >
         <Fade className="flex flex-col gap-fluid-56 max-w-[310px] self-center md:flex-row md:gap-fluid-40 md:max-w-none lg:gap-fluid-80">
           <Fade className="flex flex-col gap-fluid-32 md:justify-between ">
             <p className="text-center text-paragraph font-regular w-[90%] self-center md:max-w-[270px] md:self-center">

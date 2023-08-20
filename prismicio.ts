@@ -23,6 +23,10 @@ const routes: prismic.ClientConfig['routes'] = [
     type: 'about_us',
     path: '/about_us',
   },
+  {
+    type: 'education',
+    path: '/fraedsla/:uid',
+  },
 ]
 
 /**

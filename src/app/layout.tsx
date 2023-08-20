@@ -1,4 +1,3 @@
-import { PrismicPreview } from '@prismicio/next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -8,8 +7,6 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-poppins',
 })
-
-import { repositoryName } from '../../prismicio'
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -30,7 +27,6 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
-      <PrismicPreview repositoryName={repositoryName} />
     </html>
   )
 }

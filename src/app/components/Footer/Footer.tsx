@@ -47,9 +47,11 @@ export default async function Footer() {
               >
                 {group.navElements.map((element, i) => {
                   return (
-                    <PrismicNextLink key={i} field={element.link}>
-                      <li className="font-regular  ">{element.link_name}</li>
-                    </PrismicNextLink>
+                    <li key={i} className="font-regular ">
+                      <PrismicNextLink field={element.link}>
+                        {element.link_name}
+                      </PrismicNextLink>
+                    </li>
                   )
                 })}
               </ul>

@@ -184,9 +184,104 @@ interface ContactDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type ContactDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<ContactDocumentData>,
-    'contact',
+  prismic.PrismicDocumentWithUID<Simplify<ContactDocumentData>, 'contact', Lang>
+
+type EducationDocumentDataSlicesSlice = never
+
+/**
+ * Content for Education documents
+ */
+interface EducationDocumentData {
+  /**
+   * Hero Image field in *Education*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.hero_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero_image: prismic.ImageField<never>
+
+  /**
+   * Title field in *Education*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * RichText field in *Education*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.richtext
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  richtext: prismic.RichTextField
+
+  /**
+   * Slice Zone field in *Education*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<EducationDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Education*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: education.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField
+
+  /**
+   * Meta Image field in *Education*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>
+
+  /**
+   * Meta Title field in *Education*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: education.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+}
+
+/**
+ * Education document from Prismic
+ *
+ * - **API ID**: `education`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type EducationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<EducationDocumentData>,
+    'education',
     Lang
   >
 
@@ -746,17 +841,6 @@ interface HeaderDocumentData {
   link_group_3: prismic.GroupField<Simplify<HeaderDocumentDataLinkGroup3Item>>
 
   /**
-   * Scroll to section id field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.scroll_to_section_id
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  scroll_to_section_id: prismic.KeyTextField
-
-  /**
    * Scroll to section text field in *Header*
    *
    * - **Field Type**: Text
@@ -800,15 +884,12 @@ interface HeaderDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type HeaderDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<HeaderDocumentData>,
-    'header',
-    Lang
-  >
+  prismic.PrismicDocumentWithUID<Simplify<HeaderDocumentData>, 'header', Lang>
 
 export type AllDocumentTypes =
   | AboutUsDocument
   | ContactDocument
+  | EducationDocument
   | FooterDocument
   | FrontPageDocument
   | HeaderDocument
@@ -1279,6 +1360,8 @@ declare module '@prismicio/client' {
       AboutUsDocumentData,
       ContactDocument,
       ContactDocumentData,
+      EducationDocument,
+      EducationDocumentData,
       FooterDocument,
       FooterDocumentData,
       FrontPageDocument,

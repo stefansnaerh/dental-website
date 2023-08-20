@@ -74,8 +74,8 @@
           }
         }
       },
-      "scroll_to_section_id": {
-        "type": "Text",
+      "uid": {
+        "type": "UID",
         "config": { "label": "Scroll to section id", "placeholder": "" }
       },
       "scroll_to_section_text": {

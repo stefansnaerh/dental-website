@@ -6,6 +6,10 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "type": "UID",
+        "config": { "label": "Scroll to section id", "placeholder": "" }
+      },
       "email_paragraph": {
         "type": "Text",
         "config": { "label": "Email paragraph", "placeholder": "" }
