@@ -23,7 +23,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function Apiko({ params }: { params: Params }) {
+export default async function Education({ params }: { params: Params }) {
   const client = createClient()
 
   const page = await client.getByUID<EducationDocument>('education', params.uid)

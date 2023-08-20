@@ -64,16 +64,23 @@ export default async function Footer() {
       <div className="flex justify-between w-fill ">
         <div className="flex w-fill justify-end md:justify-around gap-32">
           <ul className="w-fill flex flex-wrap  text-[9px] sm:text-[12px] md:text-sm md:text-rock justify-around self-center">
-            <a
-              href={`https://maps.google.com/maps?q=${content.company_address}`}
-            >
-              <li>{content.company_address}</li>
-            </a>
+            <li>
+              <a
+                href={`https://maps.google.com/maps?q=${content.company_address}`}
+                aria-label="Opnar vegar leiðbeiningar í google maps"
+              >
+                {content.company_address}
+              </a>
+            </li>
+
             <li>{content.company_ssd_number}</li>
             <li>
-              <a href={`mailto:${content.company_email}`} target="_blank">
-                {content.company_email}{' '}
-                <span className="sr-only">Opnar tölvupóst í nýjum glugga</span>
+              <a
+                href={`mailto:${content.company_email}`}
+                aria-label="Opnar tölvupóst til okkar í nýjum glugga"
+                target="_blank"
+              >
+                {content.company_email}
               </a>
             </li>
             <li>
