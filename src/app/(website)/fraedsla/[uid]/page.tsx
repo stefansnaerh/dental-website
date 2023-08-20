@@ -44,19 +44,21 @@ export default async function Education({ params }: { params: Params }) {
           </div>
         </div>
       )}
-      <SliceContainer className="flex flex-col self-c gap-fluid-40 lg:gap-fluid-48 max-w-[950px] self-center">
-        {section.title && (
-          <Fade className="self-start">
-            <h1 className="text-h2 font-regular  border-b-[3px] pb-4 border-y-orange w-fit ">
-              {section.title}
-            </h1>
-          </Fade>
-        )}
-        {section.richtext && (
-          <Fade>
-            <RichText text={section.richtext} />
-          </Fade>
-        )}
+      <SliceContainer className="w-fill flex flex-col">
+        <div className="flex flex-col gap-fluid-40 lg:gap-fluid-48 max-w-[950px] self-center">
+          {section.title && (
+            <Fade className="self-start">
+              <h1 className="text-h2 font-regular  border-b-[3px] pb-4 border-y-orange w-fit ">
+                {section.title}
+              </h1>
+            </Fade>
+          )}
+          {section.richtext && (
+            <Fade>
+              <RichText text={section.richtext} />
+            </Fade>
+          )}
+        </div>
       </SliceContainer>
     </main>
   )
