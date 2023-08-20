@@ -12,8 +12,6 @@ export default async function Contact() {
 
   const content = data.data
 
-  console.log(data)
-
   return (
     <SliceContainer>
       <section
