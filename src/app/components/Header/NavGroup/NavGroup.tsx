@@ -40,7 +40,7 @@ export default function NavGroup({
             <ul
               className={
                 currentIndex === i && showNav
-                  ? 'absolute flex flex-col gap-24 bg-headerBeige p-fluid-32 rounded-b-16 top-120  transition-all duration-300 ease-in-out'
+                  ? 'absolute flex flex-col gap-24 bg-headerBeige py-fluid-32 px-fluid-40 rounded-b-12  top-[120px]  transition-all duration-300 ease-in-out'
                   : 'hidden'
               }
             >
