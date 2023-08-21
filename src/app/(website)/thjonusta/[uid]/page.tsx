@@ -46,7 +46,7 @@ export default async function Service({ params }: { params: Params }) {
       )}
       <SliceContainer className="flex flex-col self-c gap-fluid-40 lg:gap-fluid-48 max-w-[900px] self-center">
         {section.title && (
-          <Fade className="self-start">
+          <Fade className="self-start max-w-[900px]">
             <h1 className="text-h2 font-regular  border-b-[3px] pb-4 border-y-orange w-fit ">
               {section.title}
             </h1>
