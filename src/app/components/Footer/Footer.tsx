@@ -47,7 +47,10 @@ export default async function Footer() {
               >
                 {group.navElements.map((element, i) => {
                   return (
-                    <li key={i} className="font-regular ">
+                    <li
+                      key={i}
+                      className="font-regular hover:text-pureBlack transition-all duration-75 "
+                    >
                       <PrismicNextLink field={element.link}>
                         {element.link_name}
                       </PrismicNextLink>

@@ -7,6 +7,8 @@ import NavGroup from './NavGroup/NavGroup'
 import Button from '../Button/Button'
 import MobileNav from './MobileNav/mobileNav'
 
+import ScrollToSection from '../ScrollToSection/scrollToSection'
+
 export interface navGroups {
   title: KeyTextField
   navElements: object
@@ -60,9 +62,10 @@ export default async function Header() {
           </PrismicNextLink>
 
           <NavGroup headerNavGroups={headerNavGroups} />
-          <button className="hover:text-pureBlack transition-all duration-75 ease-in-out ">
-            {content.scroll_to_section_text}
-          </button>
+          <ScrollToSection
+            sectionID={data.uid}
+            buttonText={content.scroll_to_section_text}
+          />
         </div>
         <Button
           text={content.button_text}
