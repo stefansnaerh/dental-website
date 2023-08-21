@@ -78,12 +78,14 @@ export default function MobileNav({
           { ['ml-fill']: !showMobileNav, ['ml-0']: showMobileNav }
         )}
       >
-        <ul className="text-[24px] flex flex-col gap-fluid-32 ">
+        <ul className="text-[24px] flex flex-col gap-fluid-40 ">
           <li>
             {' '}
             <PrismicNextLink
+              onClick={() => setShowMobileNav(false)}
               aria-label={`Hlekkur sem fer með þig á ${firstLinkText}`}
               field={firstLink}
+              className="hover:text-pureBlack transition-all duration-75 ease-in-out "
             >
               {firstLinkText}
             </PrismicNextLink>
@@ -92,7 +94,10 @@ export default function MobileNav({
           {navGroups.map((group, i) => {
             return (
               <li key={i}>
-                <button className="flex  gap-6" onClick={() => showNavGroup(i)}>
+                <button
+                  className="flex  gap-6 hover:text-pureBlack transition-all duration-75 ease-in-out "
+                  onClick={() => showNavGroup(i)}
+                >
                   {group.title}
                   <ChevronDown
                     className={
@@ -105,7 +110,7 @@ export default function MobileNav({
                 <ul
                   className={
                     currentIndex === i && showNestedNavElements
-                      ? 'flex flex-col gap-24 rounded-b-16 top-120 p-26 transition-all duration-300 ease-in-out text-[20px]'
+                      ? 'flex flex-col gap-24 rounded-b-16 top-120 py-fluid-32 transition-all duration-300 ease-in-out text-[20px]'
                       : 'hidden transition-all duration-300 ease-in-out'
                   }
                 >
@@ -116,10 +121,11 @@ export default function MobileNav({
                     ) => {
                       return (
                         <li key={i}>
-                          {' '}
                           <PrismicNextLink
+                            onClick={() => setShowMobileNav(false)}
                             aria-label={`Hlekkur til að fara með þig á ${el.link_name}`}
                             field={el.link}
+                            className="hover:text-pureBlack transition-all duration-75 ease-in-out "
                           >
                             {el.link_name}
                           </PrismicNextLink>

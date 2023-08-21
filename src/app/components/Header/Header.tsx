@@ -34,7 +34,7 @@ export default async function Header() {
   ]
 
   return (
-    <header className="fixed top-0  left-0 right-0 justify-between flex bg-headerBeige h-[90px] xs:h-[100px] md:h-[120px] z-50 font-poppins text-md font-regular text-black ">
+    <header className="fixed top-0  left-0 right-0 justify-between flex bg-headerBeige h-[90px] xs:h-[100px] md:h-[120px] z-50 font-poppins text-md font-medium text-softBlack ">
       <a aria-label="hlekkur til að fara heim á forsíðu" href="/" className="">
         <Logo className="h-[90px] xs:h-[100px] md:h-120 lg:w-[200px] w-[180px] pl-24" />
       </a>
@@ -50,16 +50,19 @@ export default async function Header() {
       {/*-------------------------- Desktop Navigation ---------------------------------------*/}
 
       <nav className="hidden md:flex gap-fluid-56 xl:gap-fluid-72 pr-24 ">
-        <div className="flex self-center  gap-20 lg:gap-fluid-56 ">
+        <div className="flex self-center  gap-fluid-32 lg:gap-fluid-56 ">
           <PrismicNextLink
             aria-label={`Hlekkur á ${content.first_link_text}`}
             field={content.first_link}
+            className="hover:text-pureBlack transition-all duration-75 ease-in-out"
           >
             {content.first_link_text}
           </PrismicNextLink>
 
           <NavGroup headerNavGroups={headerNavGroups} />
-          <div>{content.scroll_to_section_text}</div>
+          <button className="hover:text-pureBlack transition-all duration-75 ease-in-out ">
+            {content.scroll_to_section_text}
+          </button>
         </div>
         <Button
           text={content.button_text}

@@ -25,7 +25,7 @@ export default function NavGroup({
           <div key={i} className="flex">
             <button
               aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
-              className="flex  gap-6"
+              className="flex  gap-6 hover:text-pureBlack transition-all duration-75 ease-in-out "
               onClick={() => showNavGroup(i)}
             >
               {group.title}
@@ -40,7 +40,7 @@ export default function NavGroup({
             <ul
               className={
                 currentIndex === i && showNav
-                  ? 'absolute flex flex-col gap-24 bg-headerBeige rounded-b-16 top-120 p-26 transition-all duration-300 ease-in-out'
+                  ? 'absolute flex flex-col gap-24 bg-headerBeige p-fluid-32 rounded-b-16 top-120  transition-all duration-300 ease-in-out'
                   : 'hidden'
               }
             >
@@ -50,10 +50,14 @@ export default function NavGroup({
                   i: number
                 ) => {
                   return (
-                    <li key={i}>
+                    <li
+                      className="hover:text-pureBlack transition-all duration-75 ease-in-out "
+                      key={i}
+                    >
                       <PrismicNextLink
                         aria-label={`Hlekkur á ${el.link_name}`}
                         field={el.link}
+                        onClick={() => setShowNav(false)}
                       >
                         {el.link_name}
                       </PrismicNextLink>

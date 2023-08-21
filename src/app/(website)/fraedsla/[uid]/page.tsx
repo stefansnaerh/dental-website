@@ -45,7 +45,7 @@ export default async function Education({ params }: { params: Params }) {
         </div>
       )}
       <SliceContainer className="w-fill flex flex-col">
-        <div className="flex flex-col gap-fluid-40 lg:gap-fluid-48 max-w-[950px] self-center">
+        <div className="flex flex-col gap-fluid-40 lg:gap-fluid-48 max-w-[900px] self-center">
           {section.title && (
             <Fade className="self-start">
               <h1 className="text-h2 font-regular  border-b-[3px] pb-4 border-y-orange w-fit ">
