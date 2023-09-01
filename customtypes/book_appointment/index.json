@@ -1,0 +1,84 @@
+{
+  "id": "book_appointment",
+  "label": "Book appointment",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title", "placeholder": "" }
+      },
+      "paragraph": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Paragraph",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading2,list-item"
+        }
+      },
+      "customer_name_input": {
+        "type": "Text",
+        "config": { "label": "Customer name input", "placeholder": "" }
+      },
+      "customer_ssd_input": {
+        "type": "Text",
+        "config": { "label": "Customer SSD input", "placeholder": "" }
+      },
+      "customer_phone_input": {
+        "type": "Text",
+        "config": { "label": "Customer phone input", "placeholder": "" }
+      },
+      "customer_email_input": {
+        "type": "Text",
+        "config": { "label": "Customer email input", "placeholder": "" }
+      },
+      "customer_appointment_reason_input": {
+        "type": "Text",
+        "config": {
+          "label": "Customer appointment reason input",
+          "placeholder": ""
+        }
+      },
+      "additional_info_title": {
+        "type": "Text",
+        "config": { "label": "Additional info title", "placeholder": "" }
+      },
+      "customer_additional_info": {
+        "type": "Text",
+        "config": { "label": "Customer additional info", "placeholder": "" }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": { "choices": {} }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": { "height": 1260, "width": 2400 },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

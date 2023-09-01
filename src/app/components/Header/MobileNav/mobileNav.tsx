@@ -74,11 +74,11 @@ export default function MobileNav({
 
       <nav
         className={cx(
-          ' md:hidden absolute z-10 flex  flex-col gap-fluid-72 bg-softWhite top-[90px] xs:top-[100px] overflow-y-auto h-fill min-h-[calc(100vh-100px)] w-fill px-fluid-40 py-fluid-56 transform duration-500 ease-in-out',
+          ' md:hidden absolute z-10 flex  flex-col gap-fluid-72 bg-softWhite top-[90px] xs:top-[100px] overflow-y-auto h-fill min-h-[calc(100vh-100px)] w-fill px-fluid-40 py-fluid-56 xs:py-fluid-72 xs:px-fluid-56  transform duration-500 ease-in-out',
           { ['ml-fill']: !showMobileNav, ['ml-0']: showMobileNav }
         )}
       >
-        <ul className="text-[24px] flex flex-col gap-fluid-40 ">
+        <ul className="text-[24px] flex flex-col gap-fluid-40 xs:gap-fluid-48 ">
           <li>
             {' '}
             <PrismicNextLink

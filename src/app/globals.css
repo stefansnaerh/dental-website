@@ -33,6 +33,16 @@
     @apply min-h-screen;
   }
 
+  input {
+    @apply bg-white
+    border-[1px]
+    px-6
+    font-poppins
+    h-[34px]
+    rounded-6
+    border-greyInput;
+  }
+
   img {
     @apply block
     max-w-full;
@@ -43,11 +53,6 @@
   p {
     @apply text-paragraph
     font-regular;
-  }
-
-  .label {
-    @apply text-label
-    uppercase;
   }
 
   h1,

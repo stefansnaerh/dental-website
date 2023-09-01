@@ -103,6 +103,171 @@ export type AboutUsDocument<Lang extends string = string> =
     Lang
   >
 
+type BookAppointmentDocumentDataSlicesSlice = never
+
+/**
+ * Content for Book appointment documents
+ */
+interface BookAppointmentDocumentData {
+  /**
+   * Title field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * Paragraph field in *Book appointment*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField
+
+  /**
+   * Customer name input field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_name_input
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_name_input: prismic.KeyTextField
+
+  /**
+   * Customer SSD input field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_ssd_input
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_ssd_input: prismic.KeyTextField
+
+  /**
+   * Customer phone input field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_phone_input
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_phone_input: prismic.KeyTextField
+
+  /**
+   * Customer email input field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_email_input
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_email_input: prismic.KeyTextField
+
+  /**
+   * Customer appointment reason input field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_appointment_reason_input
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_appointment_reason_input: prismic.KeyTextField
+
+  /**
+   * Additional info title field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.additional_info_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  additional_info_title: prismic.KeyTextField
+
+  /**
+   * Customer additional info field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_additional_info
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_additional_info: prismic.KeyTextField
+
+  /**
+   * Slice Zone field in *Book appointment*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BookAppointmentDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: book_appointment.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField
+
+  /**
+   * Meta Image field in *Book appointment*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>
+
+  /**
+   * Meta Title field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: book_appointment.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+}
+
+/**
+ * Book appointment document from Prismic
+ *
+ * - **API ID**: `book_appointment`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BookAppointmentDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<BookAppointmentDocumentData>,
+    'book_appointment',
+    Lang
+  >
+
 /**
  * Content for Contact documents
  */
@@ -983,6 +1148,7 @@ export type ServiceDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AboutUsDocument
+  | BookAppointmentDocument
   | ContactDocument
   | EducationDocument
   | FooterDocument
@@ -1454,6 +1620,8 @@ declare module '@prismicio/client' {
     export type {
       AboutUsDocument,
       AboutUsDocumentData,
+      BookAppointmentDocument,
+      BookAppointmentDocumentData,
       ContactDocument,
       ContactDocumentData,
       EducationDocument,

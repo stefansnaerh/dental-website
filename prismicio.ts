@@ -31,6 +31,10 @@ const routes: prismic.ClientConfig['routes'] = [
     type: 'service',
     path: '/thjonusta/:uid',
   },
+  {
+    type: 'book_appointment',
+    path: '/boka-tima',
+  },
 ]
 
 /**

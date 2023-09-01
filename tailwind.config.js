@@ -13,6 +13,7 @@ module.exports = {
       lighGrey: '#F5F5F5',
       lightGreyHover: '#865200',
       grey: '#979797',
+      greyInput: '#bababa',
       white: '#Fcfcfc',
       softWhite: '#FFFBF9',
       backgroundWhite: '#FFFCFA',
@@ -160,6 +161,7 @@ module.exports = {
         poppins: ['var(--font-poppins)'],
       },
       borderRadius: {
+        6: '6px',
         8: '8px',
         12: '12px',
         16: '16px',
