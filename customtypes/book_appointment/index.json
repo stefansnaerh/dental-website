@@ -23,17 +23,33 @@
         "type": "Text",
         "config": { "label": "Customer name input", "placeholder": "" }
       },
+      "customer_name_placeholder": {
+        "type": "Text",
+        "config": { "label": "Customer name placeholder", "placeholder": "" }
+      },
       "customer_ssd_input": {
         "type": "Text",
         "config": { "label": "Customer SSD input", "placeholder": "" }
+      },
+      "customer_ssd_placeholder": {
+        "type": "Text",
+        "config": { "label": "Customer SSD placeholder", "placeholder": "" }
       },
       "customer_phone_input": {
         "type": "Text",
         "config": { "label": "Customer phone input", "placeholder": "" }
       },
+      "customer_phone_placeholder": {
+        "type": "Text",
+        "config": { "label": "Customer phone placeholder", "placeholder": "" }
+      },
       "customer_email_input": {
         "type": "Text",
         "config": { "label": "Customer email input", "placeholder": "" }
+      },
+      "customer_email_placeholder": {
+        "type": "Text",
+        "config": { "label": "Customer email placeholder", "placeholder": "" }
       },
       "customer_appointment_reason_input": {
         "type": "Text",
@@ -42,13 +58,24 @@
           "placeholder": ""
         }
       },
+      "appointment_reason_placeholder": {
+        "type": "Text",
+        "config": {
+          "label": "Appointment reason placeholder",
+          "placeholder": ""
+        }
+      },
       "additional_info_title": {
         "type": "Text",
-        "config": { "label": "Additional info title", "placeholder": "" }
+        "config": { "label": "Additional info input", "placeholder": "" }
       },
       "customer_additional_info": {
         "type": "Text",
-        "config": { "label": "Customer additional info", "placeholder": "" }
+        "config": { "label": "Additional info placeholder", "placeholder": "" }
+      },
+      "button_text": {
+        "type": "Text",
+        "config": { "label": "Button text", "placeholder": "" }
       },
       "slices": {
         "type": "Slices",

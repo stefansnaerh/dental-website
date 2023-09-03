@@ -6,6 +6,8 @@ import SliceContainer from '../../components/SliceContainer/sliceContainer'
 import RichText from '../../components/RichText/RichText'
 import { Fade } from '../../components/Fade/fade'
 
+import Form from '../../components/Form/Form'
+
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
   const page = await client.getSingle('book_appointment')
@@ -25,7 +27,7 @@ export default async function BokaTima() {
   const section = page.data
 
   return (
-    <main className="font-poppins text-black">
+    <main className="font-poppins text-black bg-backgroundWhite">
       <SliceContainer>
         <div className="flex flex-col gap-fluid-32">
           <Fade className="flex flex-col gap-fluid-32">
@@ -34,31 +36,7 @@ export default async function BokaTima() {
             </h1>
             <RichText text={section.paragraph} />
           </Fade>
-          <form className="flex flex-col gap-fluid-18">
-            <label htmlFor="name" className="flex flex-col gap-4">
-              {section.customer_name_input}
-              <input placeholder="Jón Jónsson" name="name" type="text" />
-            </label>
-            <label
-              htmlFor="social-security-number"
-              className="flex flex-col gap-4"
-            >
-              {section.customer_ssd_input}
-              <input
-                placeholder="000000-0000"
-                name="social-security-number"
-                type="number"
-              />
-            </label>
-            <label htmlFor="phone" className="flex flex-col gap-4">
-              {section.customer_phone_input}
-              <input placeholder="000-0000" name="phone" type="tel" />
-            </label>
-            <label htmlFor="email" className="flex flex-col gap-4">
-              {section.customer_email_input}
-              <input placeholder="Jón Jónsson" name="emil" type="email" />
-            </label>
-          </form>
+          <Form data={page} />
         </div>
       </SliceContainer>
     </main>

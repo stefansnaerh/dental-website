@@ -1,7 +1,7 @@
 import { createClient } from '../../../../prismicio'
 import { PrismicNextLink } from '@prismicio/next'
 import { KeyTextField } from '@prismicio/client'
-import Logo from '../../icons/LogoNew.svg'
+import Logo from '../../icons/ApikoLogo.svg'
 import CalendarIcon from '../../icons/Calendar.svg'
 import NavGroup from './NavGroup/NavGroup'
 import Button from '../Button/Button'

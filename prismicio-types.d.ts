@@ -143,6 +143,17 @@ interface BookAppointmentDocumentData {
   customer_name_input: prismic.KeyTextField
 
   /**
+   * Customer name placeholder field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_name_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_name_placeholder: prismic.KeyTextField
+
+  /**
    * Customer SSD input field in *Book appointment*
    *
    * - **Field Type**: Text
@@ -152,6 +163,17 @@ interface BookAppointmentDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   customer_ssd_input: prismic.KeyTextField
+
+  /**
+   * Customer SSD placeholder field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_ssd_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_ssd_placeholder: prismic.KeyTextField
 
   /**
    * Customer phone input field in *Book appointment*
@@ -165,6 +187,17 @@ interface BookAppointmentDocumentData {
   customer_phone_input: prismic.KeyTextField
 
   /**
+   * Customer phone placeholder field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_phone_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_phone_placeholder: prismic.KeyTextField
+
+  /**
    * Customer email input field in *Book appointment*
    *
    * - **Field Type**: Text
@@ -174,6 +207,17 @@ interface BookAppointmentDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   customer_email_input: prismic.KeyTextField
+
+  /**
+   * Customer email placeholder field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.customer_email_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  customer_email_placeholder: prismic.KeyTextField
 
   /**
    * Customer appointment reason input field in *Book appointment*
@@ -187,7 +231,18 @@ interface BookAppointmentDocumentData {
   customer_appointment_reason_input: prismic.KeyTextField
 
   /**
-   * Additional info title field in *Book appointment*
+   * Appointment reason placeholder field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.appointment_reason_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  appointment_reason_placeholder: prismic.KeyTextField
+
+  /**
+   * Additional info input field in *Book appointment*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -198,7 +253,7 @@ interface BookAppointmentDocumentData {
   additional_info_title: prismic.KeyTextField
 
   /**
-   * Customer additional info field in *Book appointment*
+   * Additional info placeholder field in *Book appointment*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -207,6 +262,17 @@ interface BookAppointmentDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   customer_additional_info: prismic.KeyTextField
+
+  /**
+   * Button text field in *Book appointment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book_appointment.button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField
 
   /**
    * Slice Zone field in *Book appointment*

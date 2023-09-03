@@ -1,5 +1,5 @@
 import { createClient } from '../../../../prismicio'
-import Logo from '../../icons/LogoNew.svg'
+import Logo from '../../icons/ApikoLogo.svg'
 import { PrismicNextLink } from '@prismicio/next'
 
 export default async function Footer() {

@@ -38,9 +38,20 @@
     border-[1px]
     px-6
     font-poppins
-    h-[34px]
+    h-[36px]
     rounded-6
     border-greyInput;
+  }
+  textarea {
+    @apply bg-white
+      border-[1px]
+      p-6
+      resize-none
+      font-poppins
+      h-[120px]
+      rounded-6
+      w-fill
+      border-greyInput;
   }
 
   img {
