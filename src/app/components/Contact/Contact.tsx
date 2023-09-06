@@ -31,9 +31,9 @@ export default async function Contact() {
               className="bg-brown text-white self-center hover:bg-brownHover transform duration-300"
             ></Button>
           </Fade>
-          <div className="w-fill h-[3px] rounded-32 bg-orange  md:w-[4px] md:h-[170px] lg:h-[200px] xl:h-[240px] md:self-center"></div>
+          <div className="w-fill h-[3px] rounded-32 bg-orange self-center  md:w-[4px] md:h-[170px] lg:h-[200px] xl:h-[240px] md:self-center"></div>
           <Fade className="flex  flex-col gap-fluid-32 md:justify-between ">
-            <p className="text-center text-paragraph w-[90%] font-regular md:max-w-[270px] md:self-center">
+            <p className="text-center text-paragraph self-center w-[90%] font-regular md:max-w-[270px] ">
               {content.location_paragraph}
             </p>
             <Button
@@ -47,7 +47,7 @@ export default async function Contact() {
           </Fade>
           <div className="w-fill h-[3px] rounded-32 bg-orange md:h-[170px] lg:h-[200px] xl:h-[240px] md:w-[4px] md:self-center"></div>
           <Fade className="flex flex-col gap-fluid-32 md:justify-between ">
-            <p className="text-center text-paragraph w-[90%] font-regular md:max-w-[270px] md:self-center">
+            <p className="text-center text-paragraph w-[90%] font-regular md:max-w-[270px] self-center">
               {content.phone_paragraph}
             </p>
             <Button

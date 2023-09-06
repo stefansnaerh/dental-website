@@ -1,80 +1,102 @@
 'use client'
 
-import { BookAppointmentDocument } from '@/prismicio-types'
 import { useState } from 'react'
 
-export default function Form({ data }: { data: BookAppointmentDocument }) {
-  const [name, setName] = useState('')
-  const [ssd, setSsd] = useState('')
-  const [phone, setPhone] = useState('')
-  const [email, setEmail] = useState('')
-  const [reason, setReason] = useState('')
-  const [extraInfo, setExtraInfo] = useState('')
+import { BookAppointmentDocument } from '@/prismicio-types'
 
+interface FormProps {
+  nafn: string
+  kennitala: string
+  simanumer: string
+  netfang: string
+  astaeda: string
+  tilvisun: string
+}
+
+export default function Form({ data }: { data: BookAppointmentDocument }) {
   const section = data.data
+  const [ssd, setSsd] = useState('')
+
+  async function handleOnSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    const formData: FormProps = {
+      nafn: '',
+      kennitala: '',
+      simanumer: '',
+      netfang: '',
+      astaeda: '',
+      tilvisun: '',
+    }
+    const form = e.currentTarget as HTMLFormElement
+
+    Array.from(form.elements).forEach((field) => {
+      if (field instanceof HTMLInputElement && field.name) {
+        formData[field.name as keyof FormProps] = field.value
+      }
+    })
+    console.log(formData)
+  }
   return (
-    <form className="flex flex-col gap-fluid-18">
-      <label htmlFor="name" className="flex flex-col gap-4">
+    <form
+      method="POST"
+      onSubmit={handleOnSubmit}
+      className="flex flex-col gap-fluid-18"
+    >
+      <label htmlFor="kafn" className="flex flex-col gap-4">
         {section.customer_name_input}
         <input
           placeholder={`${section.customer_name_placeholder}`}
-          name="name"
+          name="nafn"
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <label htmlFor="social-security-number" className="flex flex-col gap-4">
+      <label htmlFor="kennitala" className="flex flex-col gap-4">
         {section.customer_ssd_input}
         <input
           placeholder={`${section.customer_ssd_placeholder}`}
-          name="social-security-number"
+          name="kennitala"
           type="number"
           value={ssd}
           onChange={(e) => setSsd(e.target.value)}
         />
       </label>
-      <label htmlFor="phone" className="flex flex-col gap-4">
+      <label htmlFor="símanúmer" className="flex flex-col gap-4">
         {section.customer_phone_input}
         <input
           placeholder={`${section.customer_phone_placeholder}`}
-          name="phone"
+          name="símanúmer"
           type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
         />
       </label>
-      <label htmlFor="email" className="flex flex-col gap-4">
+      <label htmlFor="netfang" className="flex flex-col gap-4">
         {section.customer_email_input}
         <input
           placeholder={`${section.customer_email_placeholder}`}
-          name="emil"
+          name="netfang"
           type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
         />
       </label>
-      <label htmlFor="reason">
+      <label htmlFor="astaeda">
         {section.customer_appointment_reason_input}
         <textarea
           maxLength={500}
           placeholder={`${section.appointment_reason_placeholder}`}
-          name="reason"
-          value={reason}
-          onChange={(e) => setReason(e.target.value)}
+          name="astaeda"
         />
       </label>
-      <label htmlFor="extra-info">
+      <label htmlFor="tilvisun">
         {section.additional_info_title}
         <textarea
           maxLength={500}
           placeholder={`${section.customer_additional_info}`}
-          name="extra-info"
-          value={extraInfo}
-          onChange={(e) => setExtraInfo(e.target.value)}
+          name="tilvisun"
         />
       </label>
-      <button className="bg-brown text-white  py-fl  py-fluid-12  shadow-button rounded-16  text-md font-poppins font-medium transition-all duration-300 ease-in-out">
+
+      <button
+        type="submit"
+        className="bg-brown text-white  py-fl  py-fluid-12  shadow-button rounded-16  text-md font-poppins font-medium transition-all duration-300 ease-in-out"
+      >
         {section.button_text}
       </button>
     </form>
