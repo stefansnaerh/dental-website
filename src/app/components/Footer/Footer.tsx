@@ -70,7 +70,7 @@ export default async function Footer() {
             <li>
               <a
                 href={`https://maps.google.com/maps?q=${content.company_address}`}
-                aria-label="Opnar vegar leiðbeiningar í google maps"
+                aria-label={`Opnar leiðbeiningar til ${content.company_address} í google maps`}
               >
                 {content.company_address}
               </a>
@@ -80,7 +80,7 @@ export default async function Footer() {
             <li>
               <a
                 href={`mailto:${content.company_email}`}
-                aria-label="Opnar tölvupóst til okkar í nýjum glugga"
+                aria-label={`Opnar tölvupóst til ${content.company_email} í nýjum glugga`}
                 target="_blank"
               >
                 {content.company_email}
