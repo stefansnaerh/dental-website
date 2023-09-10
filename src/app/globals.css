@@ -39,8 +39,7 @@
     px-6
     font-poppins
     h-[36px]
-    rounded-6
-    border-greyInput;
+    rounded-6;
   }
   textarea {
     @apply bg-white
@@ -50,8 +49,7 @@
       font-poppins
       h-[120px]
       rounded-6
-      w-fill
-      border-greyInput;
+      w-fill;
   }
 
   img {

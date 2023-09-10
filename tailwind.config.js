@@ -24,6 +24,8 @@ module.exports = {
       beigeLighter: '#FFFCF9',
       beigeDarker: '#FBEDE2',
       footerBeige: '#FFE8CB',
+      red: '#D03C3C',
+      softRed: '#FFCCCC',
       orange: '#F8B040',
       orangeHover: '#FFCC7D',
       brown: '#85623D',
