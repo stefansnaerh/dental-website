@@ -37,6 +37,7 @@
     @apply bg-white
     border-[1px]
     px-6
+    md:p-8
     font-poppins
     h-[36px]
     rounded-6;
@@ -49,6 +50,7 @@
       font-poppins
       h-[120px]
       rounded-6
+      md:p-8
       w-fill;
   }
 

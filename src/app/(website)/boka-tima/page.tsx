@@ -29,14 +29,16 @@ export default async function BokaTima() {
   return (
     <main className="font-poppins text-black bg-backgroundWhite">
       <SliceContainer>
-        <div className="flex flex-col gap-fluid-32">
-          <Fade className="flex flex-col gap-fluid-32">
+        <div className="flex flex-col gap-fluid-32  md:flex-row  md:justify-between">
+          <Fade className="flex flex-col gap-fluid-32 md:w-[40%]  ">
             <h1 className="text-h4 font-regular border-b-[3px] pb-4 border-y-orange w-fit ">
               {section.title}
             </h1>
             <RichText text={section.paragraph} />
           </Fade>
-          <Form data={page} />
+          <Fade className="md:w-[50%]">
+            <Form data={page} />
+          </Fade>
         </div>
       </SliceContainer>
     </main>

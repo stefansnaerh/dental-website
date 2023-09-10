@@ -106,152 +106,139 @@ export default function Form({ data }: { data: BookAppointmentDocument }) {
     })
   }
   return (
-    <Fade>
-      <form
-        method="POST"
-        onSubmit={handleOnSubmit}
-        className="flex flex-col gap-fluid-18"
-      >
-        <Fade>
-          <label htmlFor="kafn" className="flex flex-col gap-4">
-            {section.customer_name_input}
-            <input
-              className={cx('', {
-                ['border-red bg-softRed']: nameError,
-                ['border-greyInput']: !nameError,
-              })}
-              placeholder={`${section.customer_name_placeholder}`}
-              name="nafn"
-              type="text"
-              onChange={(e) => handleOnChange(e, setNafn, setNameError)}
-            />
-            {nameError && (
-              <p className="text-sm text-red">
-                Nafn þarf að vera rétt fyllt út
-              </p>
-            )}
-          </label>
-        </Fade>
-        <Fade>
-          <label
-            htmlFor="kennitala"
-            className={cx('flex flex-col gap-4', {
-              ['border-red']: kennitalaError,
+    <form
+      method="POST"
+      onSubmit={handleOnSubmit}
+      className="flex flex-col gap-fluid-18 md:gap-fluid-24 "
+    >
+      <Fade>
+        <label htmlFor="kafn" className="flex flex-col gap-4 md:gap-6">
+          {section.customer_name_input}
+          <input
+            className={cx('xxs:h-40 xs:h-48', {
+              ['border-red bg-softRed']: nameError,
+              ['border-greyInput']: !nameError,
+            })}
+            placeholder={`${section.customer_name_placeholder}`}
+            name="nafn"
+            type="text"
+            onChange={(e) => handleOnChange(e, setNafn, setNameError)}
+          />
+          {nameError && (
+            <p className="text-sm text-red">Nafn þarf að vera rétt fyllt út</p>
+          )}
+        </label>
+      </Fade>
+      <Fade>
+        <label htmlFor="kennitala" className="flex flex-col gap-4 md:gap-6">
+          {section.customer_ssd_input}
+          <input
+            className={cx('xxs:h-40 xs:h-48', {
+              ['border-red bg-softRed']: kennitalaError,
               ['border-greyInput']: !kennitalaError,
             })}
-          >
-            {section.customer_ssd_input}
-            <input
-              className={cx('', {
-                ['border-red bg-softRed']: kennitalaError,
-                ['border-greyInput']: !kennitalaError,
-              })}
-              placeholder={`${section.customer_ssd_placeholder}`}
-              name="kennitala"
-              type="number"
-              onChange={(e) =>
-                handleOnChange(e, setKennitala, setKennitalaError)
-              }
-            />
-            {kennitalaError && (
-              <p className="text-sm text-red">
-                Kennitala þarf að vera rétt fyllt út
-              </p>
-            )}
-          </label>
-        </Fade>
-        <Fade>
-          <label htmlFor="simanumer" className="flex flex-col gap-4">
-            {section.customer_phone_input}
-            <input
-              className={cx('', {
-                ['border-red bg-softRed']: simanumerError,
-                ['border-greyInput']: !simanumerError,
-              })}
-              placeholder={`${section.customer_phone_placeholder}`}
-              name="simanumer"
-              type="tel"
-              onChange={(e) =>
-                handleOnChange(e, setSimanumer, setSimanumerError)
-              }
-            />
-            {simanumerError && (
-              <p className="text-sm text-red">
-                Símanúmer þarf að vera rétt fyllt út
-              </p>
-            )}
-          </label>
-        </Fade>
-        <Fade>
-          <label htmlFor="netfang" className="flex flex-col gap-4">
-            {section.customer_email_input}
-            <input
-              className={cx('', {
-                ['border-red bg-softRed']: emailError,
-                ['border-greyInput']: !emailError,
-              })}
-              placeholder={`${section.customer_email_placeholder}`}
-              name="netfang"
-              type="email"
-              onChange={(e) => handleOnChange(e, setNetfang, setEmailError)}
-            />
-            {emailError && (
-              <p className="text-sm text-red">
-                Netfang þarf að vera rétt fyllt út
-              </p>
-            )}
-          </label>
-        </Fade>
-        <Fade>
-          <label htmlFor="astaeda">
-            {section.customer_appointment_reason_input}
-            <textarea
-              className={cx('', {
-                ['border-red bg-softRed']: astaedaError,
-                ['border-greyInput']: !setAstaedaError,
-              })}
-              maxLength={500}
-              placeholder={`${section.appointment_reason_placeholder}`}
-              name="astaeda"
-              onChange={(e) => handleOnChange(e, setAstaeda, setAstaedaError)}
-            />
-            {simanumerError && (
-              <p className="text-sm text-red">
-                Við þurfum að fá ástæðu tímapöntunar með
-              </p>
-            )}
-          </label>
-        </Fade>
-        <Fade>
-          <label htmlFor="tilvisun">
-            {section.additional_info_title}
-            <textarea
-              maxLength={500}
-              placeholder={`${section.customer_additional_info}`}
-              name="tilvisun"
-            />
-          </label>
-        </Fade>
-        <Fade className="w-fill">
-          <button
-            type="submit"
-            className={cx(
-              ' text-white w-fill py-fl  py-fluid-12  shadow-button rounded-16  text-md font-poppins font-medium transition-all duration-300 ease-in-out',
-              {
-                ['bg-red']: formError,
-                ['bg-brown']: !formError,
-              }
-            )}
-          >
-            {!formError ? section.button_text : 'Úps'}
-          </button>
-        </Fade>
-        {formError && (
-          <p className="text-sm text-red text-center">
-            Úps! Einhverjar upplýsingar hafa verið skrifaðar vitlausar inn
-          </p>
-        )}
-      </form>
-    </Fade>
+            placeholder={`${section.customer_ssd_placeholder}`}
+            name="kennitala"
+            type="number"
+            onChange={(e) => handleOnChange(e, setKennitala, setKennitalaError)}
+          />
+          {kennitalaError && (
+            <p className="text-sm text-red">
+              Kennitala þarf að vera rétt fyllt út
+            </p>
+          )}
+        </label>
+      </Fade>
+      <Fade>
+        <label htmlFor="simanumer" className="flex flex-col gap-4 md:gap-6">
+          {section.customer_phone_input}
+          <input
+            className={cx('xxs:h-40 xs:h-48', {
+              ['border-red bg-softRed']: simanumerError,
+              ['border-greyInput']: !simanumerError,
+            })}
+            placeholder={`${section.customer_phone_placeholder}`}
+            name="simanumer"
+            type="tel"
+            onChange={(e) => handleOnChange(e, setSimanumer, setSimanumerError)}
+          />
+          {simanumerError && (
+            <p className="text-sm text-red">
+              Símanúmer þarf að vera rétt fyllt út
+            </p>
+          )}
+        </label>
+      </Fade>
+      <Fade>
+        <label htmlFor="netfang" className="flex flex-col gap-4 md:gap-6">
+          {section.customer_email_input}
+          <input
+            className={cx('xxs:h-40 xs:h-48', {
+              ['border-red bg-softRed']: emailError,
+              ['border-greyInput']: !emailError,
+            })}
+            placeholder={`${section.customer_email_placeholder}`}
+            name="netfang"
+            type="email"
+            onChange={(e) => handleOnChange(e, setNetfang, setEmailError)}
+          />
+          {emailError && (
+            <p className="text-sm text-red">
+              Netfang þarf að vera rétt fyllt út
+            </p>
+          )}
+        </label>
+      </Fade>
+      <Fade>
+        <label htmlFor="astaeda" className="flex flex-col gap-4 md:gap-6">
+          {section.customer_appointment_reason_input}
+          <textarea
+            className={cx('xxs:h-[140px]', {
+              ['border-red bg-softRed']: astaedaError,
+              ['border-greyInput']: !astaedaError,
+            })}
+            maxLength={500}
+            placeholder={`${section.appointment_reason_placeholder}`}
+            name="astaeda"
+            onChange={(e) => handleOnChange(e, setAstaeda, setAstaedaError)}
+          />
+          {astaedaError && (
+            <p className="text-sm text-red">
+              Við þurfum að fá ástæðu tímapöntunar með
+            </p>
+          )}
+        </label>
+      </Fade>
+      <Fade>
+        <label htmlFor="tilvisun" className="flex flex-col gap-4 md:gap-6">
+          {section.additional_info_title}
+          <textarea
+            className="border-greyInput xxs:h-[140px] xs:h-[160px] md:h-[200px]"
+            maxLength={500}
+            placeholder={`${section.customer_additional_info}`}
+            name="tilvisun"
+          />
+        </label>
+      </Fade>
+      <Fade className="w-fill">
+        <button
+          type="submit"
+          className={cx(
+            ' text-white w-fill py-fl  py-fluid-12  shadow-button rounded-16  text-md font-poppins font-medium transition-all duration-300 ease-in-out',
+            {
+              ['bg-red']: formError,
+              ['bg-brown']: !formError,
+            }
+          )}
+        >
+          {!formError ? section.button_text : 'Úps'}
+        </button>
+      </Fade>
+      {formError && (
+        <p className="text-sm text-red text-center">
+          Úps! Einhverjar upplýsingar hafa verið skrifaðar vitlausar inn
+        </p>
+      )}
+    </form>
   )
 }
