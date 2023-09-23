@@ -22,7 +22,7 @@ const ScrollToSection = (props: ScrollToSectionProps) => {
   return (
     <button
       onClick={handleScroll}
-      className="hover:text-pureBlack transition-all duration-75 ease-in-out "
+      className="hover:bg-softWhite font-merriWeather py-fluid-16 px-fluid-24 rounded-16 hover:shadow-nav transition-all duration-300 ease-in-out "
     >
       {buttonText}
     </button>

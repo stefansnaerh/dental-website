@@ -94,7 +94,7 @@ module.exports = {
       xxs: '480px', //* => @media (min-width: 480px) { ... }
       xs: '640px', //* => @media (min-width: 640px) { ... }
       sm: '768px', //* => @media (min-width: 768px) { ... }
-      md: '1024px', //* => @media (min-width: 1024px) { ... }
+      md: '1059px', //* => @media (min-width: 1024px) { ... }
       lg: '1280px', //* => @media (min-width: 1280px) { ... }
       lg2: '1424px', //* => @media (min-width: 1366px) { ... }
       xl: '1664px', //* => @media (min-width: 1664px) { ... }
@@ -161,6 +161,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['var(--font-poppins)'],
+        merriWeather: ['var(--font-merriweather)'],
       },
       borderRadius: {
         6: '6px',
@@ -172,6 +173,7 @@ module.exports = {
       },
       boxShadow: {
         button: ' 0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+        nav: '0px 4px 4px 0px rgba(0, 0, 0, 0.10)',
       },
       aspectRatio: {
         '5/6': '5 / 6',
