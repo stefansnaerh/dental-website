@@ -40,6 +40,7 @@ export default async function Service({ params }: { params: Params }) {
               imgixParams={{ fit: 'crop' }}
               priority
               fill
+              sizes=""
             />
           </div>
         </div>

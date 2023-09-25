@@ -42,6 +42,7 @@ const CompanyInfo = ({ slice }: CompanyInfoProps): JSX.Element => {
                   imgixParams={{ fit: 'crop' }}
                   priority
                   fill
+                  sizes="(max-width: 768px) 100vw"
                 />
               </div>
             </div>
@@ -56,6 +57,7 @@ const CompanyInfo = ({ slice }: CompanyInfoProps): JSX.Element => {
                   imgixParams={{ fit: 'crop' }}
                   priority
                   fill
+                  sizes="(max-width: 768px) 100vw"
                 />
               </div>
             </div>
@@ -69,6 +71,7 @@ const CompanyInfo = ({ slice }: CompanyInfoProps): JSX.Element => {
                   imgixParams={{ fit: 'crop' }}
                   priority
                   fill
+                  sizes="(max-width: 768px) 100vw"
                 />
               </div>
             </div>

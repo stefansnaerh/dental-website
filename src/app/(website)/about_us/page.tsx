@@ -36,12 +36,13 @@ export default async function Apiko() {
               imgixParams={{ fit: 'crop' }}
               priority
               fill
+              sizes="(max-width: 768px) 100vw"
             />
           </div>
         </div>
       )}
       <SliceContainer className="relative flex gap-fluid-96 lg:gap-fluid-122 xl:gap-fluid-144 ">
-        <div className="flex flex-col gap-fluid-40 lg:gap-fluid-48 md:w-[30%] self-start">
+        <div className="relative flex flex-col gap-fluid-40 lg:gap-fluid-48 md:w-[30%] self-start">
           {section.title && (
             <Fade className="border-b-[3px] pb-4 border-y-orange w-fit self-start">
               <h1 className="text-h2">{section.title}</h1>
@@ -62,6 +63,7 @@ export default async function Apiko() {
                 imgixParams={{ fit: 'crop' }}
                 priority
                 fill
+                sizes="(max-width: 768px) 100vw"
               />
             </div>
           </Fade>

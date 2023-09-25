@@ -34,6 +34,7 @@ export default async function Home() {
             imgixParams={{ fit: 'crop' }}
             priority
             fill
+            sizes=""
           />
         </div>
         <Fade className="absolute z-10 m-auto  right-[15%] text-center max-w-[240px] leading-snug top-[20%] xxs:hidden">

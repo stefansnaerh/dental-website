@@ -41,6 +41,7 @@ const News = ({ slice }: NewsProps): JSX.Element => {
                       imgixParams={{ fit: 'crop' }}
                       priority
                       fill
+                      sizes="(max-width: 768px) 100vw"
                     />
                     <div className="absolute h-full z-20 w-fill flex flex-col gap-fluid-12  px-fluid-32 pt-fluid-32 xxs:px-fluid-40 xxs:pt-fluid-40 ">
                       <div className="w-fill flex justify-between">
@@ -85,6 +86,7 @@ const News = ({ slice }: NewsProps): JSX.Element => {
                       imgixParams={{ fit: 'crop' }}
                       priority
                       fill
+                      sizes="(max-width: 768px) 100vw"
                     />
                   </div>
                   <div className="relative w-[60%] md:w-[50%] lg:w-[45%] bg-beigeDarker group-hover:bg-orangeHover rounded-12 flex flex-col gap-fluid-18 md:gap-fluid-24  px-fluid-40 pt-fluid-40 md:px-fluid-48 md:pt-fluid-48 lg:px-fluid-56 lg:pt-fluid-56 xl:px-fluid-64 xl:pt-fluid-64 transform duration-300 ease-in-out">

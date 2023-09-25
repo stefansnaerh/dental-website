@@ -26,13 +26,14 @@ const WorkForce = ({ slice }: WorkForceProps): JSX.Element => {
                 key={index}
               >
                 <div className="relative w-fill xxs:w-[80%] sm:w-fill  self-center">
-                  <div className=" pb-[100%] ">
+                  <div className="relative pb-[100%] ">
                     <PrismicNextImage
                       field={item.image}
                       className="object-cover z-0 rounded-12"
                       imgixParams={{ fit: 'crop' }}
                       fill
-                      sizes=""
+                      sizes="(max-width: 768px) 100vw"
+                      priority
                     />
                   </div>
                 </div>
