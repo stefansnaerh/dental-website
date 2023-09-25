@@ -52,11 +52,11 @@ export default async function Header() {
       {/*-------------------------- Desktop Navigation ---------------------------------------*/}
 
       <nav className="hidden md:flex gap-fluid-12 xl:gap-fluid-72 pr-24 ">
-        <div className="flex self-center  gap-fluid-12 lg:gap-fluid-56 font-merriWeather">
+        <div className="flex self-center  gap-fluid-12 lg:gap-fluid-56 ">
           <PrismicNextLink
             aria-label={`Hlekkur á ${content.first_link_text}`}
             field={content.first_link}
-            className="hover:text-pureBlack font-merriWeather hover:bg-softWhite py-fluid-16 px-fluid-24 rounded-16 hover:shadow-nav transition-all duration-300 ease-in-out"
+            className="hover:text-pureBlack  hover:bg-softWhite py-fluid-16 px-fluid-24 rounded-16 hover:shadow-nav transition-all duration-300 ease-in-out"
           >
             {content.first_link_text}
           </PrismicNextLink>
@@ -73,7 +73,7 @@ export default async function Header() {
           ariaLabel={`Hlekkur til að fara á ${content.button_text}`}
           icon={<CalendarIcon className="h-24 w-24" />}
           href={content.button_link}
-          className="bg-brown text-white font-medium self-center hover:bg-brownHover transition-all duration-300 ease-in-out"
+          className="bg-brown text-white  font-medium self-center hover:bg-brownHover transition-all duration-300 ease-in-out"
         />
       </nav>
     </header>

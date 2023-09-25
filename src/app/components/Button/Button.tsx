@@ -47,7 +47,7 @@ export default function Button({
       <PrismicNextLink
         field={href}
         aria-label={ariaLabel}
-        className={`group flex  py-fl gap-8 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
+        className={`group flex  gap-8 py-fluid-16 px-fluid-24 rounded-16 h-fit w-fit text-md font-poppins font-medium transition-all duration-300 ease-in-out ${className} ${
           noShadow ? '' : 'shadow-button '
         }`}
         onClick={onClick}
