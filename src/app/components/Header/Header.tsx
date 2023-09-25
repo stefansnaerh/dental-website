@@ -2,7 +2,7 @@ import { createClient } from '../../../../prismicio'
 import { PrismicNextLink } from '@prismicio/next'
 import { KeyTextField } from '@prismicio/client'
 import Logo from '../../icons/ApikoLogo.svg'
-import CalendarIcon from '../../icons/Calendar.svg'
+
 import NavGroup from './NavGroup/NavGroup'
 import Button from '../Button/Button'
 import MobileNav from './MobileNav/mobileNav'
@@ -71,7 +71,6 @@ export default async function Header() {
           text={content.button_text}
           type="anchor"
           ariaLabel={`Hlekkur til að fara á ${content.button_text}`}
-          icon={<CalendarIcon className="h-24 w-24" />}
           href={content.button_link}
           className="bg-brown text-white  font-medium self-center hover:bg-brownHover transition-all duration-300 ease-in-out"
         />

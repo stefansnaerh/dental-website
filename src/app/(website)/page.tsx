@@ -7,7 +7,6 @@ import { PrismicNextImage } from '@prismicio/next'
 
 import { Fade } from '../components/Fade/fade'
 import Button from '../components/Button/Button'
-import CalendarIcon from '@/src/app/icons//Calendar.svg'
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
@@ -60,7 +59,6 @@ export default async function Home() {
               <Button
                 text={content.second_link_text}
                 type="anchor"
-                icon={<CalendarIcon className="h-24 w-24" />}
                 href={content.second_link}
                 ariaLabel={`Hlekkur á ${content.second_link_text}`}
                 className="bg-brown  text-white font-medium  hover:bg-brownHover"
